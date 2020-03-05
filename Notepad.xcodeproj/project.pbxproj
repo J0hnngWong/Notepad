@@ -41,6 +41,10 @@
 		788A56B9240FD16C00E5484A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56B8240FD16C00E5484A /* Note.swift */; };
 		788A56BB240FD2E700E5484A /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56BA240FD2E700E5484A /* FakeData.swift */; };
 		788A56BD240FDC0600E5484A /* NoteEditPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56BC240FDC0600E5484A /* NoteEditPage.swift */; };
+		788A56BF2410AAE100E5484A /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56BE2410AAE100E5484A /* DataBaseManager.swift */; };
+		788A56C22411253000E5484A /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 788A56C02411253000E5484A /* Note.xcdatamodeld */; };
+		788A56C924112A3300E5484A /* NoteEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56C724112A3300E5484A /* NoteEntity+CoreDataClass.swift */; };
+		788A56CA24112A3300E5484A /* NoteEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56C824112A3300E5484A /* NoteEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +105,10 @@
 		788A56B8240FD16C00E5484A /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		788A56BA240FD2E700E5484A /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
 		788A56BC240FDC0600E5484A /* NoteEditPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditPage.swift; sourceTree = "<group>"; };
+		788A56BE2410AAE100E5484A /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		788A56C12411253000E5484A /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
+		788A56C724112A3300E5484A /* NoteEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		788A56C824112A3300E5484A /* NoteEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +139,8 @@
 		788A5440240D130800E5484A = {
 			isa = PBXGroup;
 			children = (
+				788A56C724112A3300E5484A /* NoteEntity+CoreDataClass.swift */,
+				788A56C824112A3300E5484A /* NoteEntity+CoreDataProperties.swift */,
 				788A544B240D130800E5484A /* Notepad */,
 				788A5462240D130A00E5484A /* NotepadTests */,
 				788A546D240D130A00E5484A /* NotepadUITests */,
@@ -160,6 +170,8 @@
 				788A56B8240FD16C00E5484A /* Note.swift */,
 				788A56BA240FD2E700E5484A /* FakeData.swift */,
 				788A56BC240FDC0600E5484A /* NoteEditPage.swift */,
+				788A56BE2410AAE100E5484A /* DataBaseManager.swift */,
+				788A56C02411253000E5484A /* Note.xcdatamodeld */,
 				788A568F240E888000E5484A /* Resources */,
 				788A5452240D130A00E5484A /* Assets.xcassets */,
 				788A5457240D130A00E5484A /* LaunchScreen.storyboard */,
@@ -394,12 +406,16 @@
 				788A544D240D130800E5484A /* AppDelegate.swift in Sources */,
 				788A56AE240E888F00E5484A /* MapView.swift in Sources */,
 				788A568E240E886000E5484A /* Landmark.swift in Sources */,
+				788A56CA24112A3300E5484A /* NoteEntity+CoreDataProperties.swift in Sources */,
 				788A56AF240E888F00E5484A /* CircleImage.swift in Sources */,
 				788A568D240E886000E5484A /* Data.swift in Sources */,
+				788A56BF2410AAE100E5484A /* DataBaseManager.swift in Sources */,
 				788A56BD240FDC0600E5484A /* NoteEditPage.swift in Sources */,
 				788A5687240E884B00E5484A /* LandmarkList.swift in Sources */,
+				788A56C22411253000E5484A /* Note.xcdatamodeld in Sources */,
 				788A56B2240E88AC00E5484A /* UserData.swift in Sources */,
 				788A56B4240E896C00E5484A /* NoteListCell.swift in Sources */,
+				788A56C924112A3300E5484A /* NoteEntity+CoreDataClass.swift in Sources */,
 				788A56BB240FD2E700E5484A /* FakeData.swift in Sources */,
 				788A5689240E885600E5484A /* LandmarkDetail.swift in Sources */,
 				788A544F240D130800E5484A /* SceneDelegate.swift in Sources */,
@@ -724,6 +740,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		788A56C02411253000E5484A /* Note.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				788A56C12411253000E5484A /* Note.xcdatamodel */,
+			);
+			currentVersion = 788A56C12411253000E5484A /* Note.xcdatamodel */;
+			path = Note.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 788A5441240D130800E5484A /* Project object */;
 }
