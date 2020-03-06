@@ -52,7 +52,7 @@ class DataBaseManager {
         dbContext = context
     }
     
-    public func insertNote(note: Note, complete: ((Array<NoteEntity>) -> (Void))) {
+    public func insertNote(note: Note, complete: ((Array<NoteEntity>) -> (Void))?) {
         guard let context = dbContext else { return }
         // 1.根据entity名称和NSManagedObjectContext获取一个新的继承于NSManagedObject的子类Note
         guard let noteEntity: NoteEntity = NSEntityDescription.insertNewObject(forEntityName: "NoteEntity", into: context) as? NoteEntity else { return }
@@ -74,6 +74,39 @@ class DataBaseManager {
             print("insert data fail")
         }
         
+    }
+    
+    public func deleteNote(by id: UUID, complete: ((Array<NoteEntity>) -> (Void))?) {
+        guard let context = dbContext else { return }
+        // 创建删除请求
+        let deleteRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
+        // 删除条件
+        let deletePredicate = NSPredicate(format: "id = %@", id.uuidString)
+        deleteRequest.predicate = deletePredicate
+        
+        // 返回要删除的对象数组
+        let deleteArray = try? context.fetch(deleteRequest) as? Array<NSManagedObject>
+        
+        // 从数据库中删除
+        guard let requestDeleteArray = deleteArray else {
+            // 没有需要删除的
+            return
+        }
+        for note in requestDeleteArray {
+            context.delete(note)
+        }
+        
+        // 没有任何条件就是读取所有的数据
+//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
+//        let resultArray = try? context.execute(request)
+        // 可能需要刷新数据
+        
+        // 记住保存
+        do {
+            try context.save()
+        } catch {
+            print("save delete action fail")
+        }
     }
     
     public func testFunc() -> String {
