@@ -109,6 +109,33 @@ class DataBaseManager {
         }
     }
     
+    public func updateNote(by id: UUID, title: String, detail: String, date: Date) {
+        guard let context = dbContext else { return }
+        // 创建查询请求
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
+        let updatePredicate = NSPredicate(format: "id = %@", id.uuidString)
+        request.predicate = updatePredicate
+        
+        // 发送请求
+        guard let resultArray = try? context.fetch(request) as? Array<NoteEntity> else { return } //否则就是没有查询到相应记录
+        
+        // 修改
+        for noteEntity in resultArray {
+            noteEntity.title = title
+            noteEntity.detail = detail
+            noteEntity.date = date
+        }
+        
+        //可能需要刷新数据
+        
+        //保存操作
+        do {
+            try context.save()
+        } catch {
+            print("update note fail")
+        }
+    }
+    
     public func testFunc() -> String {
         return "context content: \(String(describing: dbContext))"
     }
