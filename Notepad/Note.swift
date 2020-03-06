@@ -9,8 +9,15 @@
 import Foundation
 
 struct Note: Hashable, Codable, Identifiable {
-    var id: Int
+    var id: UUID
     var title: String
     var detail: String
     var date: Date
+    
+    init(title: String, detail: String, date: Date) {
+        self.id = UUID()
+        self.title = title
+        self.detail = detail
+        self.date = date
+    }
 }

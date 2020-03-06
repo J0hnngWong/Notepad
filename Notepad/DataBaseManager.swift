@@ -52,6 +52,30 @@ class DataBaseManager {
         dbContext = context
     }
     
+    public func insertNote(note: Note, complete: ((Array<NoteEntity>) -> (Void))) {
+        guard let context = dbContext else { return }
+        // 1.根据entity名称和NSManagedObjectContext获取一个新的继承于NSManagedObject的子类Note
+        guard let noteEntity: NoteEntity = NSEntityDescription.insertNewObject(forEntityName: "NoteEntity", into: context) as? NoteEntity else { return }
+        
+        // 2.根据Note中的键值 给NSManagedObject对象赋值
+        noteEntity.title = note.title
+        noteEntity.detail = note.detail
+        noteEntity.date = note.date
+        noteEntity.id = UUID()
+        
+        // 查询所有数据请求
+//        let request: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
+//        let resultArray = try? context.fetch(request) as? Array<NoteEntity>
+        
+        // 保存插入的数据
+        do {
+            try context.save()
+        } catch {
+            print("insert data fail")
+        }
+        
+    }
+    
     public func testFunc() -> String {
         return "context content: \(String(describing: dbContext))"
     }
