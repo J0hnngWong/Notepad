@@ -14,7 +14,7 @@ func getData() -> Array<Note> {
     var resultArray: [Note] = []
     
     for item in 0...10 {
-        let note = Note(title: "title\(item)", detail: "detail\(item)", date: Date())
+        let note = Note(id: UUID(), title: "title\(item)", detail: "detail\(item)", date: Date())
         resultArray.append(note)
     }
     

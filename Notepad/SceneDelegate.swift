@@ -21,11 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
-            DataBaseManager.sharedManager.testFunc()
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView: NoteList().environmentObject(UserDataManager()))
             self.window = window
             window.makeKeyAndVisible()
+            
+            test()
         }
     }
 
@@ -60,3 +61,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+extension SceneDelegate {
+    func test() {
+        
+        print(DataBaseManager.sharedManager.testFunc())
+        DataBaseManager.sharedManager.insertNote(note: Note(id: UUID(), title: "lililili", detail: "cccccccccc", date: Date())) { (result) -> (Void) in
+            print("\(result)")
+        }
+        
+        DataBaseManager.sharedManager.deleteNote(by: UUID(uuidString: "480CDCB0-2638-4F5D-BCF5-973F77EEA03B"), complete: nil)
+        
+        DataBaseManager.sharedManager.updateNote(by: UUID(uuidString: "480CDCB0-2638-4F5D-BCF5-973F77EEA03B"), title: "hahahahah", detail: "ddiiiiiiooooopppp", date: Date())
+            
+        DataBaseManager.sharedManager.searchNote(by: nil) { (result) -> (Void) in
+            print("\(result)")
+        }
+    }
+}

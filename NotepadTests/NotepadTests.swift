@@ -22,10 +22,6 @@ class NotepadTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        print(DataBaseManager.sharedManager.testFunc())
-        DataBaseManager.sharedManager.insertNote(note: Note(title: "aaa", detail: "bbbb", date: Date())) { (result) -> (Void) in
-            print("\(result)")
-        }
     }
 
     func testPerformanceExample() {

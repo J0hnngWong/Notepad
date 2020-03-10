@@ -14,8 +14,8 @@ struct Note: Hashable, Codable, Identifiable {
     var detail: String
     var date: Date
     
-    init(title: String, detail: String, date: Date) {
-        self.id = UUID()
+    init(id: UUID, title: String, detail: String, date: Date) {
+        self.id = id
         self.title = title
         self.detail = detail
         self.date = date
