@@ -16,7 +16,7 @@ struct NoteList: View {
         NavigationView {
             List {
                 ForEach(userData.userNoteData) { note in
-                    NavigationLink(destination: NoteEditPage()) {
+                    NavigationLink(destination: NoteEditPage(title: note.title, detail: note.detail)) {
                         NoteListCell(note: note)
                     }
                 }

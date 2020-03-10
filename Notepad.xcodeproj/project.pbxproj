@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7854D65F24177C95007A5BB8 /* KeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854D65E24177C95007A5BB8 /* KeyboardListener.swift */; };
+		7854D66124177FF9007A5BB8 /* EditStateScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854D66024177FF9007A5BB8 /* EditStateScrollView.swift */; };
 		788A544D240D130800E5484A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A544C240D130800E5484A /* AppDelegate.swift */; };
 		788A544F240D130800E5484A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A544E240D130800E5484A /* SceneDelegate.swift */; };
 		788A5453240D130A00E5484A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 788A5452240D130A00E5484A /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7854D65E24177C95007A5BB8 /* KeyboardListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardListener.swift; sourceTree = "<group>"; };
+		7854D66024177FF9007A5BB8 /* EditStateScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStateScrollView.swift; sourceTree = "<group>"; };
 		788A5449240D130800E5484A /* Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		788A544C240D130800E5484A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		788A544E240D130800E5484A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 				788A5685240E881500E5484A /* SwiftUIDemo */,
 				788A544C240D130800E5484A /* AppDelegate.swift */,
 				788A544E240D130800E5484A /* SceneDelegate.swift */,
+				7854D65E24177C95007A5BB8 /* KeyboardListener.swift */,
 				788A5683240E880D00E5484A /* NoteList.swift */,
 				788A56B3240E896C00E5484A /* NoteListCell.swift */,
 				788A56B6240FD02200E5484A /* UserDataManager.swift */,
@@ -177,6 +182,7 @@
 				788A5457240D130A00E5484A /* LaunchScreen.storyboard */,
 				788A545A240D130A00E5484A /* Info.plist */,
 				788A5454240D130A00E5484A /* Preview Content */,
+				7854D66024177FF9007A5BB8 /* EditStateScrollView.swift */,
 			);
 			path = Notepad;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				788A56B9240FD16C00E5484A /* Note.swift in Sources */,
+				7854D66124177FF9007A5BB8 /* EditStateScrollView.swift in Sources */,
 				788A544D240D130800E5484A /* AppDelegate.swift in Sources */,
 				788A56AE240E888F00E5484A /* MapView.swift in Sources */,
 				788A568E240E886000E5484A /* Landmark.swift in Sources */,
@@ -421,6 +428,7 @@
 				788A544F240D130800E5484A /* SceneDelegate.swift in Sources */,
 				788A56B7240FD02200E5484A /* UserDataManager.swift in Sources */,
 				788A5684240E880D00E5484A /* NoteList.swift in Sources */,
+				7854D65F24177C95007A5BB8 /* KeyboardListener.swift in Sources */,
 				788A56B0240E888F00E5484A /* LandmarkRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
