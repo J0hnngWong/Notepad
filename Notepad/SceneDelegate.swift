@@ -21,10 +21,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
+            let userDataManager = UserDataManager()
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: NoteList().environmentObject(UserDataManager()))
+            window.rootViewController = UIHostingController(rootView: NoteList().environmentObject(userDataManager))
             self.window = window
             window.makeKeyAndVisible()
+            
+            
+            // initialize data
+            userDataManager.retriveAllUserNoteData()
             
             test()
         }
