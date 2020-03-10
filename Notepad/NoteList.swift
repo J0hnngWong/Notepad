@@ -11,20 +11,33 @@ import SwiftUI
 struct NoteList: View {
     @EnvironmentObject private var userData: UserDataManager
     
+    let addButtonHeight: CGFloat = 50
     var body: some View {
         
-        NavigationView {
-            List {
-                ForEach(userData.userNoteData) { note in
-                    NavigationLink(destination: NoteEditPage(title: note.title, detail: note.detail)) {
-                        NoteListCell(note: note)
+        VStack {
+            NavigationView {
+                VStack {
+                    List {
+                        ForEach(userData.userNoteData) { note in
+                            NavigationLink(destination: NoteEditPage(title: note.title, detail: note.detail)) {
+                                NoteListCell(note: note)
+                            }
+                        }
+                        .onDelete { (indexSet) in
+                            self.userData.userNoteData.remove(atOffsets: indexSet)
+                        }
                     }
-                }
-                .onDelete { (indexSet) in
-                    self.userData.userNoteData.remove(atOffsets: indexSet)
+                    .navigationBarTitle(Text("NoteList"), displayMode: .large)
+                    .padding(.bottom, -addButtonHeight)
+                    
+                    Button(action: {
+                        
+                    }) {
+                        Text("Add")
+                    }
+                    .frame(width: addButtonHeight, height: addButtonHeight, alignment: .center)
                 }
             }
-            .navigationBarTitle(Text("NoteList"), displayMode: .large)
         }
     }
 }
