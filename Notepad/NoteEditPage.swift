@@ -13,8 +13,6 @@ struct NoteEditPage: View {
     @State var userData: UserDataManager
     @State var pageType: EditPageType
     @State var noteInfo: Note
-//    @State var title: String
-//    @State var detail: String
     @ObservedObject var keyboardListener = KeyboardListener()
     @State var paddingValue: CGFloat = 0
     @Environment(\.presentationMode) var presentation
@@ -69,7 +67,7 @@ struct NoteEditPage: View {
                     .foregroundColor(.black)
                     
                     Spacer()
-                        .frame(width: UIScreen.main.bounds.width - 32, height: 2, alignment: .center)
+                        .frame(width: UIScreen.main.bounds.width - 32, height: 1, alignment: .center)
                         .background(Color.secondary)
                 }
                 .padding()
@@ -121,39 +119,4 @@ struct NoteEditPage_Previews: PreviewProvider {
 enum EditPageType {
     case new
     case edit
-}
-
-struct commitButton: View {
-    @Environment(\.presentationMode) var presentation
-    
-    var body: some View {
-        Button(action: {
-            self.presentation.wrappedValue.dismiss()
-        }) {
-            Text("Commit")
-        }
-    }
-}
-
-struct CustomEditField: View {
-    
-    var textPlaceHolder: String
-    @State var textInput: String
-    var editFieldFont: Font
-    var onEditingChangeEvent: (Bool) -> Void
-    var onCommitEvent: () -> Void
-    
-    var body : some View {
-        VStack {
-            TextField(textPlaceHolder, text: $textInput, onEditingChanged: onEditingChangeEvent, onCommit: onCommitEvent)
-//                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .font(editFieldFont)
-                .foregroundColor(.black)
-            
-            Spacer()
-                .frame(width: UIScreen.main.bounds.width - 32, height: 2, alignment: .center)
-                .background(Color.red)
-        }
-        .padding()
-    }
 }
