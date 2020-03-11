@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // initialize data
             userDataManager.retriveAllUserNoteData()
             
-            test()
+//            test()
         }
     }
 
@@ -76,7 +76,7 @@ extension SceneDelegate {
         
         DataBaseManager.sharedManager.deleteNote(by: UUID(uuidString: "480CDCB0-2638-4F5D-BCF5-973F77EEA03B"), complete: nil)
         
-        DataBaseManager.sharedManager.updateNote(by: UUID(uuidString: "480CDCB0-2638-4F5D-BCF5-973F77EEA03B"), title: "hahahahah", detail: "ddiiiiiiooooopppp", date: Date())
+        DataBaseManager.sharedManager.updateNote(by: UUID(uuidString: "480CDCB0-2638-4F5D-BCF5-973F77EEA03B"), title: "hahahahah", detail: "ddiiiiiiooooopppp", date: Date(), complete: nil)
             
         DataBaseManager.sharedManager.searchNote(by: nil) { (result) -> (Void) in
             print("\(result)")

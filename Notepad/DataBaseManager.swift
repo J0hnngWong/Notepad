@@ -76,7 +76,7 @@ class DataBaseManager {
         
     }
     
-    public func deleteNote(by id: UUID?, complete: ((Array<NoteEntity>) -> (Void))?) {
+    public func deleteNote(by id: UUID?, complete: ((Array<NoteEntity>?) -> (Void))?) {
         guard let context = dbContext else { return }
         guard let operateUUID = id else { return }
         // 创建删除请求
@@ -98,8 +98,9 @@ class DataBaseManager {
         }
         
         // 没有任何条件就是读取所有的数据
-//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
-//        let resultArray = try? context.execute(request)
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
+        let resultArray = try? context.fetch(request) as? Array<NoteEntity>
+        complete?(resultArray)
         // 可能需要刷新数据
         
         // 记住保存
@@ -110,7 +111,7 @@ class DataBaseManager {
         }
     }
     
-    public func updateNote(by id: UUID?, title: String, detail: String, date: Date) {
+    public func updateNote(by id: UUID?, title: String, detail: String, date: Date, complete: ((Array<NoteEntity>?) -> (Void))?) {
         guard let context = dbContext else { return }
         guard let operateUUID = id else { return }
         // 创建查询请求
@@ -129,7 +130,9 @@ class DataBaseManager {
         }
         
         //可能需要刷新数据
-        
+        let fetchAllRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
+        let allNoteResultArray = try? context.fetch(fetchAllRequest) as? Array<NoteEntity>
+        complete?(allNoteResultArray)
         //保存操作
         do {
             try context.save()

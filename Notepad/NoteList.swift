@@ -16,18 +16,29 @@ struct NoteList: View {
     var body: some View {
         NavigationView {
             VStack {
-                List {
-                    ForEach(userData.userNoteData) { note in
-                        NavigationLink(destination: NoteEditPage(title: note.title, detail: note.detail)) {
-                            NoteListCell(note: note)
+                if userData.userNoteData.count > 0 {
+                    List {
+                        ForEach(userData.userNoteData) { note in
+                            NavigationLink(destination: NoteEditPage(userData: self.userData, pageType: .edit, noteInfo: note, onCommit: {
+                                self.userData.retriveAllUserNoteData()
+                            })) {
+                                NoteListCell(note: note)
+                            }
+                        }
+                        .onDelete { (indexSet) in
+                            print("userNoteData:  \(self.userData.userNoteData)")
+                            for index in indexSet {
+                                self.userData.deleteNote(by: self.userData.userNoteData[index].id, complete: nil)
+                            }
+//                            self.userData.userNoteData.remove(atOffsets: indexSet) //如果remove的话会由于数据排序问题出现错误删除，由于数据与UI同步所以其实不需要remove这个cell
                         }
                     }
-                    .onDelete { (indexSet) in
-                        self.userData.userNoteData.remove(atOffsets: indexSet)
-                    }
+    //                .navigationBarTitle(Text("NoteList"), displayMode: .large)
+                    .padding(.bottom, -addButtonHeight)
+                } else {
+                    Spacer()
                 }
-                .navigationBarTitle(Text("NoteList"), displayMode: .large)
-                .padding(.bottom, -addButtonHeight)
+                
                 
                 Button("Add") {
                     self.isPresented = true
@@ -35,10 +46,13 @@ struct NoteList: View {
                 .sheet(isPresented: $isPresented, onDismiss: {
                     self.isPresented = false
                 }) {
-                    NoteEditPage(title: "", detail: "")
+                    NoteEditPage(userData: self.userData, pageType: .new, noteInfo:Note(id: UUID(), title: "", detail: "", date: Date()), onCommit: {
+                        self.userData.retriveAllUserNoteData()
+                    })
                 }
-                .frame(width: addButtonHeight, height: addButtonHeight, alignment: .center)
+                .frame(width: addButtonHeight, height: addButtonHeight)
             }
+            .navigationBarTitle(Text("NoteList"), displayMode: .large)
         }
     }
 }
