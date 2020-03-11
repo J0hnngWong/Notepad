@@ -30,6 +30,7 @@ struct NoteEditPage: View {
     var body: some View {
         ScrollView {
             VStack {
+                //头部空白
                 if pageType == .new {
                     Spacer(minLength: 30)
                     Text("New Note")
@@ -37,6 +38,7 @@ struct NoteEditPage: View {
                     Text("Edit Note")
                 }
                 
+                // 两个编辑框
                 VStack {
                     TextField("Title", text: $noteInfo.title, onEditingChanged: { (onEdit) in
                         
@@ -72,6 +74,7 @@ struct NoteEditPage: View {
                 }
                 .padding()
                 
+                //提交按钮
                 if pageType == .new {
                     Spacer()
                         .frame(height: 30)
@@ -92,6 +95,10 @@ struct NoteEditPage: View {
                             .cornerRadius(40)
                     }
                 }
+                
+                //加星
+                
+                
             }
         }
         .padding(.bottom, keyboardListener.currentHeight)
