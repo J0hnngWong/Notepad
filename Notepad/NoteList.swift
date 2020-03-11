@@ -12,7 +12,7 @@ struct NoteList: View {
     @State private var isPresented = false
     @EnvironmentObject private var userData: UserDataManager
     
-    let addButtonHeight: CGFloat = 50
+    let addButtonSize: CGSize = CGSize(width: 50, height: 50)
     var body: some View {
         NavigationView {
             VStack {
@@ -34,15 +34,22 @@ struct NoteList: View {
                         }
                     }
     //                .navigationBarTitle(Text("NoteList"), displayMode: .large)
-                    .padding(.bottom, -addButtonHeight)
+                    .padding(.bottom, -addButtonSize.height)
                 } else {
                     Spacer()
                 }
                 
-                
-                Button("Add") {
+                Button(action: {
                     self.isPresented = true
-                }
+                }, label: {
+                    Image(systemName: "plus")
+                        .imageScale(.large)
+                        .frame(width: addButtonSize.width, height: addButtonSize.height)
+                        .foregroundColor(Color.white)
+                        .background(Color.blue)
+                        .cornerRadius(addButtonSize.width / 2)
+                        
+                })
                 .sheet(isPresented: $isPresented, onDismiss: {
                     self.isPresented = false
                 }) {
@@ -50,7 +57,9 @@ struct NoteList: View {
                         self.userData.retriveAllUserNoteData()
                     })
                 }
-                .frame(width: addButtonHeight, height: addButtonHeight)
+                .offset(x: 0, y: -8)
+//                .frame(width: addButtonSize.width, height: addButtonSize.height)
+                
             }
             .navigationBarTitle(Text("NoteList"), displayMode: .large)
         }
