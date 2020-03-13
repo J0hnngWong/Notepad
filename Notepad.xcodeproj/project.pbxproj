@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7854D65F24177C95007A5BB8 /* KeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854D65E24177C95007A5BB8 /* KeyboardListener.swift */; };
 		7854D66124177FF9007A5BB8 /* EditStateScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854D66024177FF9007A5BB8 /* EditStateScrollView.swift */; };
+		7854D6E7241B807B007A5BB8 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854D6E6241B807B007A5BB8 /* Tools.swift */; };
 		788A544D240D130800E5484A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A544C240D130800E5484A /* AppDelegate.swift */; };
 		788A544F240D130800E5484A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A544E240D130800E5484A /* SceneDelegate.swift */; };
 		788A5453240D130A00E5484A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 788A5452240D130A00E5484A /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		7854D65E24177C95007A5BB8 /* KeyboardListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardListener.swift; sourceTree = "<group>"; };
 		7854D66024177FF9007A5BB8 /* EditStateScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStateScrollView.swift; sourceTree = "<group>"; };
+		7854D6E6241B807B007A5BB8 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		788A5449240D130800E5484A /* Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		788A544C240D130800E5484A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		788A544E240D130800E5484A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				788A56BC240FDC0600E5484A /* NoteEditPage.swift */,
 				788A56BE2410AAE100E5484A /* DataBaseManager.swift */,
 				788A56C02411253000E5484A /* Note.xcdatamodeld */,
+				7854D6E6241B807B007A5BB8 /* Tools.swift */,
 				788A568F240E888000E5484A /* Resources */,
 				788A5452240D130A00E5484A /* Assets.xcassets */,
 				788A5457240D130A00E5484A /* LaunchScreen.storyboard */,
@@ -414,6 +417,7 @@
 				788A56AE240E888F00E5484A /* MapView.swift in Sources */,
 				788A568E240E886000E5484A /* Landmark.swift in Sources */,
 				788A56CA24112A3300E5484A /* NoteEntity+CoreDataProperties.swift in Sources */,
+				7854D6E7241B807B007A5BB8 /* Tools.swift in Sources */,
 				788A56AF240E888F00E5484A /* CircleImage.swift in Sources */,
 				788A568D240E886000E5484A /* Data.swift in Sources */,
 				788A56BF2410AAE100E5484A /* DataBaseManager.swift in Sources */,

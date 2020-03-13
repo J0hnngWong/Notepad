@@ -74,6 +74,15 @@ struct NoteEditPage: View {
                 }
                 .padding()
                 
+                if pageType == .edit {
+                    Spacer()
+                    Text("Last Edit Date: \n \(noteInfo.date)")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .padding()
+                    Spacer()
+                }
+                
                 //提交按钮
                 if pageType == .new {
                     Spacer()
@@ -91,7 +100,7 @@ struct NoteEditPage: View {
                         Text("Commit")
                             .frame(width: 80, height: 36, alignment: .center)
                             .background(Color.blue)
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                             .cornerRadius(40)
                     }
                 }

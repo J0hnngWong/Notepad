@@ -68,7 +68,9 @@ struct NoteList: View {
 
 struct NoteList_Previews: PreviewProvider {
     static var previews: some View {
-        NoteList()
+        ForEach(["iPhone XS Max"], id: \.self) { deviceName in
+            NoteList()
             .environmentObject(UserDataManager())
+        }
     }
 }

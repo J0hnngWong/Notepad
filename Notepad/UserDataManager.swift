@@ -16,7 +16,8 @@ final class UserDataManager: ObservableObject {
     func retriveAllUserNoteData() {
         DataBaseManager.sharedManager.searchNote(by: nil) { [weak self] (NoteEntity) -> (Void) in
             print("\(NoteEntity)")
-            self?.userNoteData = self?.mapToNoteSet(with: NoteEntity) ?? []
+            
+            self?.userNoteData = self?.sortNoteByDate(with: self?.mapToNoteSet(with: NoteEntity) ?? []) ?? []
         }
     }
     
@@ -60,5 +61,10 @@ extension UserDataManager {
         let noteDetail = noteEntity.detail ?? ""
         let noteDate = noteEntity.date ?? Date()
         return Note(id: noteId, title: noteTitle, detail: noteDetail, date: noteDate)
+    }
+    
+    func sortNoteByDate(with notes: Array<Note>) -> Array<Note> {
+//        return Tools.mergeSort(list: notes) { return $0.date > $1.date }
+        return notes.sorted { return $0.date > $1.date }
     }
 }
