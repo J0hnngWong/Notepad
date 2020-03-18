@@ -10,6 +10,6 @@ Notes = "Notes";
 Title = "Title";
 Detail = "Detail";
 NewNote = "New Note";
-EditNote = "Edit";
+Edit = "Edit";
 Commit = "Commit";
 LastEditDate = "Last Edit Date";

@@ -130,6 +130,7 @@ struct NoteEditPage: View {
                 
             }
         }
+        .background(Color.white)
         .padding(.bottom, keyboardListener.currentHeight)
         .navigationBarItems(trailing: Button(action: {
             if(!self.noteInfo.title.isEmpty && self.pageType == .new) {

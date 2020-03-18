@@ -12,7 +12,7 @@ struct NoteList: View {
     @State private var isPresented = false
     @EnvironmentObject private var userData: UserDataManager
     
-    let addButtonSize: CGSize = CGSize(width: 50, height: 50)
+    let addButtonSize: CGSize = CGSize(width: 60, height: 60)
     var body: some View {
         NavigationView {
             VStack {
