@@ -34,23 +34,34 @@ struct NoteEditPage: View {
                 if pageType == .new {
                     Spacer(minLength: 30)
                     Text("New Note")
+                        .font(.custom("Futura-Medium", size: 32))
+                        .foregroundColor(Color.black)
                 } else {
                     Text("Edit Note")
                 }
                 
                 // 两个编辑框
                 VStack {
+                    HStack {
+                        Text("Title")
+                        .font(.custom("Futura-Medium", size: 26))
+                        .foregroundColor(Color.black)
+                        
+                        Spacer()
+                    }
+                    
                     TextField("Title", text: $noteInfo.title, onEditingChanged: { (onEdit) in
                         
                     }) {
                         
                     }
 //                      .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .font(.title)
+                        .font(.custom("Avenir-Book", size: 24))
                         .foregroundColor(.black)
+                        
                     
                     Spacer()
-                        .frame(width: UIScreen.main.bounds.width - 32, height: 2, alignment: .center)
+                        .frame(width: UIScreen.main.bounds.width - 32, height: 1, alignment: .center)
                         .background(Color.primary)
                 }
                 .padding()
@@ -59,13 +70,21 @@ struct NoteEditPage: View {
                     .frame(height: 30)
                 
                 VStack {
+                    HStack {
+                        Text("Detail")
+                        .font(.custom("Futura-Medium", size: 26))
+                        .foregroundColor(Color.black)
+                        
+                        Spacer()
+                    }
+                    
                     TextField("detail", text: $noteInfo.detail, onEditingChanged: { (value) in
                         
                     }) {
                         
                     }
 //                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .font(.body)
+                    .font(.custom("Avenir-Book", size: 24))
                     .foregroundColor(.black)
                     
                     Spacer()
@@ -98,10 +117,11 @@ struct NoteEditPage: View {
                         
                     }) {
                         Text("Commit")
-                            .frame(width: 80, height: 36, alignment: .center)
+                            .font(.custom("Futura-Medium", size: 16))
+                            .frame(width: 120, height: 44, alignment: .center)
                             .background(Color.blue)
                             .foregroundColor(.white)
-                            .cornerRadius(40)
+                            .cornerRadius(60)
                     }
                 }
                 
