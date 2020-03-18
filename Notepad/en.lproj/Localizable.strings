@@ -1,0 +1,14 @@
+/* 
+  localizeStringFile.strings
+  Notepad
+
+  Created by 王嘉宁 on 2020/3/18.
+  Copyright © 2020 王嘉宁. All rights reserved.
+*/
+
+Title = "Title";
+Detail = "Detail";
+NewNote = "New Note";
+EditNote = "Edit Note";
+Commit = "Commit";
+LastEditDate = "Last Edit Date";

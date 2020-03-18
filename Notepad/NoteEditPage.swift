@@ -33,24 +33,24 @@ struct NoteEditPage: View {
                 //头部空白
                 if pageType == .new {
                     Spacer(minLength: 30)
-                    Text("New Note")
+                    Text(NSLocalizedString("NewNote", comment: ""))
                         .font(.custom("Futura-Medium", size: 32))
                         .foregroundColor(Color.black)
                 } else {
-                    Text("Edit Note")
+                    Text(NSLocalizedString("EditNote", comment: ""))
                 }
                 
                 // 两个编辑框
                 VStack {
                     HStack {
-                        Text("Title")
+                        Text(NSLocalizedString("Title", comment: ""))
                         .font(.custom("Futura-Medium", size: 26))
                         .foregroundColor(Color.black)
                         
                         Spacer()
                     }
                     
-                    TextField("Title", text: $noteInfo.title, onEditingChanged: { (onEdit) in
+                    TextField(NSLocalizedString("Title", comment: ""), text: $noteInfo.title, onEditingChanged: { (onEdit) in
                         
                     }) {
                         
@@ -71,14 +71,14 @@ struct NoteEditPage: View {
                 
                 VStack {
                     HStack {
-                        Text("Detail")
+                        Text(NSLocalizedString("Detail", comment: ""))
                         .font(.custom("Futura-Medium", size: 26))
                         .foregroundColor(Color.black)
                         
                         Spacer()
                     }
                     
-                    TextField("detail", text: $noteInfo.detail, onEditingChanged: { (value) in
+                    TextField(NSLocalizedString("Detail", comment: ""), text: $noteInfo.detail, onEditingChanged: { (value) in
                         
                     }) {
                         
@@ -95,7 +95,7 @@ struct NoteEditPage: View {
                 
                 if pageType == .edit {
                     Spacer()
-                    Text("Last Edit Date: \n \(noteInfo.date)")
+                    Text("\(NSLocalizedString("LastEditDate", comment: "")): \n \(noteInfo.date)")
                         .font(.footnote)
                         .foregroundColor(.gray)
                         .padding()
@@ -116,7 +116,7 @@ struct NoteEditPage: View {
                         self.presentation.wrappedValue.dismiss()
                         
                     }) {
-                        Text("Commit")
+                        Text(NSLocalizedString("Commit", comment: ""))
                             .font(.custom("Futura-Medium", size: 16))
                             .frame(width: 120, height: 44, alignment: .center)
                             .background(Color.blue)
@@ -141,7 +141,7 @@ struct NoteEditPage: View {
             self.presentation.wrappedValue.dismiss()
             
         }) {
-            Text("Commit")
+            Text(NSLocalizedString("Commit", comment: ""))
         })
     }
 }
