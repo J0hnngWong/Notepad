@@ -6,9 +6,10 @@
   Copyright © 2020 王嘉宁. All rights reserved.
 */
 
+Notes = "Notes";
 Title = "Title";
 Detail = "Detail";
 NewNote = "New Note";
-EditNote = "Edit Note";
+EditNote = "Edit";
 Commit = "Commit";
 LastEditDate = "Last Edit Date";

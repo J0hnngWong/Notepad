@@ -6,9 +6,10 @@
   Copyright © 2020 王嘉宁. All rights reserved.
 */
 
+Notes = "笔记本";
 Title = "标题";
 Detail = "详细";
 NewNote = "新笔记";
-EditNote = "编辑笔记";
+EditNote = "编辑";
 Commit = "提交";
 LastEditDate = "上次编辑时间";

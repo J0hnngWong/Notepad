@@ -61,7 +61,10 @@ struct NoteList: View {
 //                .frame(width: addButtonSize.width, height: addButtonSize.height)
                 
             }
-            .navigationBarTitle(Text("NoteList"), displayMode: .large)
+            .navigationBarTitle(
+                Text(NSLocalizedString("Notes", comment: ""))
+                    .font(.custom("Futura-Medium", size: 26)),
+                displayMode: .large)
         }
     }
 }

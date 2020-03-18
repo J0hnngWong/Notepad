@@ -37,7 +37,7 @@ struct NoteEditPage: View {
                         .font(.custom("Futura-Medium", size: 32))
                         .foregroundColor(Color.black)
                 } else {
-                    Text(NSLocalizedString("EditNote", comment: ""))
+                    Spacer()
                 }
                 
                 // 两个编辑框
@@ -143,6 +143,7 @@ struct NoteEditPage: View {
         }) {
             Text(NSLocalizedString("Commit", comment: ""))
         })
+        .navigationBarTitle(Text(NSLocalizedString("Edit", comment: "")), displayMode: .inline)
     }
 }
 

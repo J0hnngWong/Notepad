@@ -15,14 +15,14 @@ struct NoteListCell: View {
         HStack {
             VStack(alignment: .leading, spacing: 0) {
                 Text(note.title)
-                    .font(.custom("", size: 18))
+                    .font(.custom("Avenir-Book", size: 18))
                 Text(note.detail)
                     .foregroundColor(Color.gray)
-                    .font(.custom("", size: 14))
+                    .font(.custom("Avenir-Book", size: 14))
             }
             Spacer()
-            Image(systemName: "star.fill")
-                .foregroundColor(Color.yellow)
+//            Image(systemName: "star.fill")
+//                .foregroundColor(Color.yellow)
         }
         .padding()
     }
