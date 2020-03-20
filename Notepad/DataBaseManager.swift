@@ -31,8 +31,12 @@ class DataBaseManager {
         let store = NSPersistentStoreCoordinator(managedObjectModel: model)
         
         //数据库的名称和路径
-        let dbStr = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last
-        guard let dbPath = dbStr?.appending("NoteDataBase.sqlite") else { return }
+        guard let dbStr = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last else { return }
+        var dbPathStr = String(dbStr)
+        if !dbStr.hasSuffix("/") {
+            dbPathStr.append("/")
+        }
+        let dbPath = dbPathStr.appending("NoteDataBase.sqlite")
         print("data base path is : \(dbPath)")
         let dbUrl = URL(fileURLWithPath: dbPath)
         
@@ -41,7 +45,9 @@ class DataBaseManager {
         do {
             try store.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: dbUrl, options: nil)
         } catch {
+            dbContext = nil
             print("data base add persistent store error: fail to add a database")
+            return
         }
         
         //3. 创建上下文 保存信息 操作数据库
