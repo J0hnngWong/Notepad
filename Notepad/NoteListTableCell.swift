@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import UIKit
+
+class NoteListTableCell: UITableViewCell {
+    
+    static let NoteListTableCellReusableIdentifier = "NoteListTableCellReusableIdentifier"
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.contentView.backgroundColor = .red
+    }
+}

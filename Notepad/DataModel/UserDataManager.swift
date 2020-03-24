@@ -10,9 +10,19 @@ import Foundation
 //import SwiftUI
 //import Combine
 
+extension Notification.Name {
+    public static let UserNoteDataUpdateNotification = Notification.Name("UserNoteDataUpdateNotification")
+}
+
 final class UserDataManager {
-//    @Published var showFavoritesOnly = false
-    var userNoteData = fakeUserData
+    
+    static let `default` = UserDataManager()
+    
+    var userNoteData: [Note] = [] {
+        didSet {
+            NotificationCenter.default.post(Notification(name: .UserNoteDataUpdateNotification))
+        }
+    }
     
     func retriveAllUserNoteData() {
         DataBaseManager.sharedManager.searchNote(by: nil) { [weak self] (NoteEntity) -> (Void) in

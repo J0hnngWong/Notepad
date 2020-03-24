@@ -12,6 +12,8 @@
 		7846899B242A2854007FD3D5 /* NoteEditPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846899A242A2854007FD3D5 /* NoteEditPageViewController.swift */; };
 		7846899D242A2869007FD3D5 /* NoteListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846899C242A2869007FD3D5 /* NoteListTableCell.swift */; };
 		7846899F242A2EEA007FD3D5 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846899E242A2EEA007FD3D5 /* MainNavigationViewController.swift */; };
+		784689A1242A3723007FD3D5 /* NoteListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784689A0242A3723007FD3D5 /* NoteListTableCell.xib */; };
+		784689A3242A38C7007FD3D5 /* UITableViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784689A2242A38C7007FD3D5 /* UITableViewSupport.swift */; };
 		7854D6E7241B807B007A5BB8 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854D6E6241B807B007A5BB8 /* Tools.swift */; };
 		788A544D240D130800E5484A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A544C240D130800E5484A /* AppDelegate.swift */; };
 		788A5453240D130A00E5484A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 788A5452240D130A00E5484A /* Assets.xcassets */; };
@@ -73,6 +75,8 @@
 		7846899A242A2854007FD3D5 /* NoteEditPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditPageViewController.swift; sourceTree = "<group>"; };
 		7846899C242A2869007FD3D5 /* NoteListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListTableCell.swift; sourceTree = "<group>"; };
 		7846899E242A2EEA007FD3D5 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
+		784689A0242A3723007FD3D5 /* NoteListTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteListTableCell.xib; sourceTree = "<group>"; };
+		784689A2242A38C7007FD3D5 /* UITableViewSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewSupport.swift; sourceTree = "<group>"; };
 		7854D6E6241B807B007A5BB8 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		788A5449240D130800E5484A /* Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		788A544C240D130800E5484A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -183,7 +187,9 @@
 				78468997242A2763007FD3D5 /* DataModel */,
 				7846899A242A2854007FD3D5 /* NoteEditPageViewController.swift */,
 				7846899C242A2869007FD3D5 /* NoteListTableCell.swift */,
+				784689A0242A3723007FD3D5 /* NoteListTableCell.xib */,
 				78468998242A2820007FD3D5 /* NoteListViewController.swift */,
+				784689A2242A38C7007FD3D5 /* UITableViewSupport.swift */,
 				7846899E242A2EEA007FD3D5 /* MainNavigationViewController.swift */,
 				788A544C240D130800E5484A /* AppDelegate.swift */,
 				7854D6E6241B807B007A5BB8 /* Tools.swift */,
@@ -380,6 +386,7 @@
 				783F259424220A4100CB117D /* Localizable.strings in Resources */,
 				788A5456240D130A00E5484A /* Preview Assets.xcassets in Resources */,
 				788A5453240D130A00E5484A /* Assets.xcassets in Resources */,
+				784689A1242A3723007FD3D5 /* NoteListTableCell.xib in Resources */,
 				788A569F240E888000E5484A /* silversalmoncreek.jpg in Resources */,
 				788A569D240E888000E5484A /* charleyrivers.jpg in Resources */,
 				788A56A6240E888000E5484A /* chincoteague.jpg in Resources */,
@@ -529,6 +536,7 @@
 				78468999242A2820007FD3D5 /* NoteListViewController.swift in Sources */,
 				788A56BF2410AAE100E5484A /* DataBaseManager.swift in Sources */,
 				788A56C22411253000E5484A /* Note.xcdatamodeld in Sources */,
+				784689A3242A38C7007FD3D5 /* UITableViewSupport.swift in Sources */,
 				788A56C924112A3300E5484A /* NoteEntity+CoreDataClass.swift in Sources */,
 				7846899F242A2EEA007FD3D5 /* MainNavigationViewController.swift in Sources */,
 				788A56BB240FD2E700E5484A /* FakeData.swift in Sources */,
