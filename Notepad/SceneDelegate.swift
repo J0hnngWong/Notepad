@@ -91,11 +91,15 @@ extension SceneDelegate {
         var resultShortCutArray: Array<UIApplicationShortcutItem> = []
         
         if userDataManager.userNoteData.count >= 1 {
-            let firstNote = UIApplicationShortcutItem(type: "com.Johnny.first.note", localizedTitle: userDataManager.userNoteData[0].title, localizedSubtitle: userDataManager.userNoteData[0].detail, icon: UIApplicationShortcutIcon(type: .alarm), userInfo: nil)
+            let firstNote = UIApplicationShortcutItem(type: "com.Johnny.first.note", localizedTitle: userDataManager.userNoteData[0].title, localizedSubtitle: userDataManager.userNoteData[0].detail, icon: UIApplicationShortcutIcon(type: .compose), userInfo: nil)
             resultShortCutArray.append(firstNote)
         }
         if userDataManager.userNoteData.count >= 2 {
-            let secondNote = UIApplicationShortcutItem(type: "com.Johnny.second.note", localizedTitle: userDataManager.userNoteData[1].title, localizedSubtitle: userDataManager.userNoteData[1].detail, icon: UIApplicationShortcutIcon(type: .alarm), userInfo: nil)
+            let secondNote = UIApplicationShortcutItem(type: "com.Johnny.second.note", localizedTitle: userDataManager.userNoteData[1].title, localizedSubtitle: userDataManager.userNoteData[1].detail, icon: UIApplicationShortcutIcon(type: .compose), userInfo: nil)
+            resultShortCutArray.append(secondNote)
+        }
+        if userDataManager.userNoteData.count >= 3 {
+            let secondNote = UIApplicationShortcutItem(type: "com.Johnny.second.note", localizedTitle: userDataManager.userNoteData[2].title, localizedSubtitle: userDataManager.userNoteData[2].detail, icon: UIApplicationShortcutIcon(type: .compose), userInfo: nil)
             resultShortCutArray.append(secondNote)
         }
         
