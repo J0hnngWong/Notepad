@@ -13,3 +13,6 @@ NewNote = "新笔记";
 Edit = "编辑";
 Commit = "提交";
 LastEditDate = "上次编辑时间";
+
+
+localizeTest = "本地化测试";

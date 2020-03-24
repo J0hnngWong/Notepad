@@ -13,6 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    let userDataManager = UserDataManager()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -21,7 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
-            let userDataManager = UserDataManager()
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView: NoteList().environmentObject(userDataManager))
             self.window = window
@@ -33,6 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
 //            test()
         }
+        addShortCut()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -81,5 +82,24 @@ extension SceneDelegate {
         DataBaseManager.sharedManager.searchNote(by: nil) { (result) -> (Void) in
             print("\(result)")
         }
+    }
+}
+
+
+extension SceneDelegate {
+    func addShortCut() {
+        var resultShortCutArray: Array<UIApplicationShortcutItem> = []
+        
+        if userDataManager.userNoteData.count >= 1 {
+            let firstNote = UIApplicationShortcutItem(type: "com.Johnny.first.note", localizedTitle: userDataManager.userNoteData[0].title, localizedSubtitle: userDataManager.userNoteData[0].detail, icon: UIApplicationShortcutIcon(type: .alarm), userInfo: nil)
+            resultShortCutArray.append(firstNote)
+        }
+        if userDataManager.userNoteData.count >= 2 {
+            let secondNote = UIApplicationShortcutItem(type: "com.Johnny.second.note", localizedTitle: userDataManager.userNoteData[1].title, localizedSubtitle: userDataManager.userNoteData[1].detail, icon: UIApplicationShortcutIcon(type: .alarm), userInfo: nil)
+            resultShortCutArray.append(secondNote)
+        }
+        
+        
+        UIApplication.shared.shortcutItems = resultShortCutArray
     }
 }

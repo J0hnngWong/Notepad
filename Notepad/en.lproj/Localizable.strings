@@ -13,3 +13,6 @@ NewNote = "New Note";
 Edit = "Edit";
 Commit = "Commit";
 LastEditDate = "Last Edit Date";
+
+
+localizeTest = "localizeTest";
