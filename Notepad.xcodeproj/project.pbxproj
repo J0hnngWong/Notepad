@@ -3,26 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		783F259424220A4100CB117D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 783F259624220A4100CB117D /* Localizable.strings */; };
-		7854D65F24177C95007A5BB8 /* KeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854D65E24177C95007A5BB8 /* KeyboardListener.swift */; };
-		7854D66124177FF9007A5BB8 /* EditStateScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854D66024177FF9007A5BB8 /* EditStateScrollView.swift */; };
+		78468999242A2820007FD3D5 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78468998242A2820007FD3D5 /* NoteListViewController.swift */; };
+		7846899B242A2854007FD3D5 /* NoteEditPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846899A242A2854007FD3D5 /* NoteEditPageViewController.swift */; };
+		7846899D242A2869007FD3D5 /* NoteListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846899C242A2869007FD3D5 /* NoteListTableCell.swift */; };
+		7846899F242A2EEA007FD3D5 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846899E242A2EEA007FD3D5 /* MainNavigationViewController.swift */; };
 		7854D6E7241B807B007A5BB8 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854D6E6241B807B007A5BB8 /* Tools.swift */; };
 		788A544D240D130800E5484A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A544C240D130800E5484A /* AppDelegate.swift */; };
-		788A544F240D130800E5484A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A544E240D130800E5484A /* SceneDelegate.swift */; };
 		788A5453240D130A00E5484A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 788A5452240D130A00E5484A /* Assets.xcassets */; };
 		788A5456240D130A00E5484A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 788A5455240D130A00E5484A /* Preview Assets.xcassets */; };
 		788A5459240D130A00E5484A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 788A5457240D130A00E5484A /* LaunchScreen.storyboard */; };
 		788A5464240D130A00E5484A /* NotepadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A5463240D130A00E5484A /* NotepadTests.swift */; };
 		788A546F240D130A00E5484A /* NotepadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A546E240D130A00E5484A /* NotepadUITests.swift */; };
-		788A5684240E880D00E5484A /* NoteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A5683240E880D00E5484A /* NoteList.swift */; };
-		788A5687240E884B00E5484A /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A5686240E884A00E5484A /* LandmarkList.swift */; };
-		788A5689240E885600E5484A /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A5688240E885600E5484A /* LandmarkDetail.swift */; };
-		788A568D240E886000E5484A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A568B240E886000E5484A /* Data.swift */; };
-		788A568E240E886000E5484A /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A568C240E886000E5484A /* Landmark.swift */; };
 		788A569D240E888000E5484A /* charleyrivers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 788A5690240E888000E5484A /* charleyrivers.jpg */; };
 		788A569E240E888000E5484A /* turtlerock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 788A5691240E888000E5484A /* turtlerock.jpg */; };
 		788A569F240E888000E5484A /* silversalmoncreek.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 788A5692240E888000E5484A /* silversalmoncreek.jpg */; };
@@ -36,19 +32,16 @@
 		788A56A7240E888000E5484A /* stmarylake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 788A569A240E888000E5484A /* stmarylake.jpg */; };
 		788A56A8240E888000E5484A /* chilkoottrail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 788A569B240E888000E5484A /* chilkoottrail.jpg */; };
 		788A56A9240E888000E5484A /* rainbowlake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 788A569C240E888000E5484A /* rainbowlake.jpg */; };
-		788A56AE240E888F00E5484A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56AB240E888F00E5484A /* MapView.swift */; };
-		788A56AF240E888F00E5484A /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56AC240E888F00E5484A /* CircleImage.swift */; };
-		788A56B0240E888F00E5484A /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56AD240E888F00E5484A /* LandmarkRow.swift */; };
-		788A56B2240E88AC00E5484A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56B1240E88AC00E5484A /* UserData.swift */; };
-		788A56B4240E896C00E5484A /* NoteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56B3240E896C00E5484A /* NoteListCell.swift */; };
 		788A56B7240FD02200E5484A /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56B6240FD02200E5484A /* UserDataManager.swift */; };
 		788A56B9240FD16C00E5484A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56B8240FD16C00E5484A /* Note.swift */; };
 		788A56BB240FD2E700E5484A /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56BA240FD2E700E5484A /* FakeData.swift */; };
-		788A56BD240FDC0600E5484A /* NoteEditPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56BC240FDC0600E5484A /* NoteEditPage.swift */; };
 		788A56BF2410AAE100E5484A /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56BE2410AAE100E5484A /* DataBaseManager.swift */; };
 		788A56C22411253000E5484A /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 788A56C02411253000E5484A /* Note.xcdatamodeld */; };
 		788A56C924112A3300E5484A /* NoteEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56C724112A3300E5484A /* NoteEntity+CoreDataClass.swift */; };
 		788A56CA24112A3300E5484A /* NoteEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56C824112A3300E5484A /* NoteEntity+CoreDataProperties.swift */; };
+		938E66D863918962725EF5A0 /* Pods_Notepad_NotepadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD140393147B75F710D19631 /* Pods_Notepad_NotepadUITests.framework */; };
+		D1D869A4DA0DA919A64A7716 /* Pods_NotepadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116F7D49B7BF8F5C2E12EF0A /* Pods_NotepadTests.framework */; };
+		E9BE50C4E6301AAA339DAF84 /* Pods_Notepad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873DDD2DD8BCDC91B25B2689 /* Pods_Notepad.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,15 +62,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		116F7D49B7BF8F5C2E12EF0A /* Pods_NotepadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotepadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		201702BB34EC942B4A859DFA /* Pods-NotepadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotepadTests.debug.xcconfig"; path = "Target Support Files/Pods-NotepadTests/Pods-NotepadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3DF7372181A6696886803E36 /* Pods-Notepad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notepad.release.xcconfig"; path = "Target Support Files/Pods-Notepad/Pods-Notepad.release.xcconfig"; sourceTree = "<group>"; };
+		5E19D69E11C51DF7635E65AF /* Pods-Notepad-NotepadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notepad-NotepadUITests.release.xcconfig"; path = "Target Support Files/Pods-Notepad-NotepadUITests/Pods-Notepad-NotepadUITests.release.xcconfig"; sourceTree = "<group>"; };
 		783F2593242208B900CB117D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		783F259524220A4100CB117D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		783F259724220A4700CB117D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7854D65E24177C95007A5BB8 /* KeyboardListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardListener.swift; sourceTree = "<group>"; };
-		7854D66024177FF9007A5BB8 /* EditStateScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStateScrollView.swift; sourceTree = "<group>"; };
+		78468998242A2820007FD3D5 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
+		7846899A242A2854007FD3D5 /* NoteEditPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditPageViewController.swift; sourceTree = "<group>"; };
+		7846899C242A2869007FD3D5 /* NoteListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListTableCell.swift; sourceTree = "<group>"; };
+		7846899E242A2EEA007FD3D5 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		7854D6E6241B807B007A5BB8 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		788A5449240D130800E5484A /* Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		788A544C240D130800E5484A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		788A544E240D130800E5484A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		788A5452240D130A00E5484A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		788A5455240D130A00E5484A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		788A5458240D130A00E5484A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,11 +86,6 @@
 		788A546A240D130A00E5484A /* NotepadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotepadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		788A546E240D130A00E5484A /* NotepadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotepadUITests.swift; sourceTree = "<group>"; };
 		788A5470240D130A00E5484A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		788A5683240E880D00E5484A /* NoteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteList.swift; sourceTree = "<group>"; };
-		788A5686240E884A00E5484A /* LandmarkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
-		788A5688240E885600E5484A /* LandmarkDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
-		788A568B240E886000E5484A /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		788A568C240E886000E5484A /* Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		788A5690240E888000E5484A /* charleyrivers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = charleyrivers.jpg; sourceTree = "<group>"; };
 		788A5691240E888000E5484A /* turtlerock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = turtlerock.jpg; sourceTree = "<group>"; };
 		788A5692240E888000E5484A /* silversalmoncreek.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = silversalmoncreek.jpg; sourceTree = "<group>"; };
@@ -106,19 +99,18 @@
 		788A569A240E888000E5484A /* stmarylake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stmarylake.jpg; sourceTree = "<group>"; };
 		788A569B240E888000E5484A /* chilkoottrail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chilkoottrail.jpg; sourceTree = "<group>"; };
 		788A569C240E888000E5484A /* rainbowlake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rainbowlake.jpg; sourceTree = "<group>"; };
-		788A56AB240E888F00E5484A /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		788A56AC240E888F00E5484A /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
-		788A56AD240E888F00E5484A /* LandmarkRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
-		788A56B1240E88AC00E5484A /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		788A56B3240E896C00E5484A /* NoteListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListCell.swift; sourceTree = "<group>"; };
 		788A56B6240FD02200E5484A /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		788A56B8240FD16C00E5484A /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		788A56BA240FD2E700E5484A /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
-		788A56BC240FDC0600E5484A /* NoteEditPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditPage.swift; sourceTree = "<group>"; };
 		788A56BE2410AAE100E5484A /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		788A56C12411253000E5484A /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
 		788A56C724112A3300E5484A /* NoteEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		788A56C824112A3300E5484A /* NoteEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7AC09183A06CE98647D4FA8A /* Pods-Notepad-NotepadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notepad-NotepadUITests.debug.xcconfig"; path = "Target Support Files/Pods-Notepad-NotepadUITests/Pods-Notepad-NotepadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DCAB49E907130598B13D814 /* Pods-Notepad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notepad.debug.xcconfig"; path = "Target Support Files/Pods-Notepad/Pods-Notepad.debug.xcconfig"; sourceTree = "<group>"; };
+		873DDD2DD8BCDC91B25B2689 /* Pods_Notepad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notepad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C29E13F668E9D3850E65478 /* Pods-NotepadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotepadTests.release.xcconfig"; path = "Target Support Files/Pods-NotepadTests/Pods-NotepadTests.release.xcconfig"; sourceTree = "<group>"; };
+		FD140393147B75F710D19631 /* Pods_Notepad_NotepadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notepad_NotepadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9BE50C4E6301AAA339DAF84 /* Pods_Notepad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D869A4DA0DA919A64A7716 /* Pods_NotepadTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,12 +134,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938E66D863918962725EF5A0 /* Pods_Notepad_NotepadUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78468997242A2763007FD3D5 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				788A56B6240FD02200E5484A /* UserDataManager.swift */,
+				788A56B8240FD16C00E5484A /* Note.swift */,
+				788A56BA240FD2E700E5484A /* FakeData.swift */,
+				788A56BE2410AAE100E5484A /* DataBaseManager.swift */,
+				788A56C02411253000E5484A /* Note.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		788A5440240D130800E5484A = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +162,8 @@
 				788A5462240D130A00E5484A /* NotepadTests */,
 				788A546D240D130A00E5484A /* NotepadUITests */,
 				788A544A240D130800E5484A /* Products */,
+				A5A7B0A3C6FD9CF4471879BC /* Pods */,
+				CEB81D171A7A5B3E64CE562A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,18 +180,12 @@
 		788A544B240D130800E5484A /* Notepad */ = {
 			isa = PBXGroup;
 			children = (
-				788A5685240E881500E5484A /* SwiftUIDemo */,
+				78468997242A2763007FD3D5 /* DataModel */,
+				7846899A242A2854007FD3D5 /* NoteEditPageViewController.swift */,
+				7846899C242A2869007FD3D5 /* NoteListTableCell.swift */,
+				78468998242A2820007FD3D5 /* NoteListViewController.swift */,
+				7846899E242A2EEA007FD3D5 /* MainNavigationViewController.swift */,
 				788A544C240D130800E5484A /* AppDelegate.swift */,
-				788A544E240D130800E5484A /* SceneDelegate.swift */,
-				7854D65E24177C95007A5BB8 /* KeyboardListener.swift */,
-				788A5683240E880D00E5484A /* NoteList.swift */,
-				788A56B3240E896C00E5484A /* NoteListCell.swift */,
-				788A56B6240FD02200E5484A /* UserDataManager.swift */,
-				788A56B8240FD16C00E5484A /* Note.swift */,
-				788A56BA240FD2E700E5484A /* FakeData.swift */,
-				788A56BC240FDC0600E5484A /* NoteEditPage.swift */,
-				788A56BE2410AAE100E5484A /* DataBaseManager.swift */,
-				788A56C02411253000E5484A /* Note.xcdatamodeld */,
 				7854D6E6241B807B007A5BB8 /* Tools.swift */,
 				783F259624220A4100CB117D /* Localizable.strings */,
 				788A568F240E888000E5484A /* Resources */,
@@ -190,7 +193,6 @@
 				788A5457240D130A00E5484A /* LaunchScreen.storyboard */,
 				788A545A240D130A00E5484A /* Info.plist */,
 				788A5454240D130A00E5484A /* Preview Content */,
-				7854D66024177FF9007A5BB8 /* EditStateScrollView.swift */,
 			);
 			path = Notepad;
 			sourceTree = "<group>";
@@ -221,27 +223,6 @@
 			path = NotepadUITests;
 			sourceTree = "<group>";
 		};
-		788A5685240E881500E5484A /* SwiftUIDemo */ = {
-			isa = PBXGroup;
-			children = (
-				788A56AA240E888F00E5484A /* Supporting Views */,
-				788A568A240E886000E5484A /* Models */,
-				788A5688240E885600E5484A /* LandmarkDetail.swift */,
-				788A5686240E884A00E5484A /* LandmarkList.swift */,
-				788A56B1240E88AC00E5484A /* UserData.swift */,
-			);
-			path = SwiftUIDemo;
-			sourceTree = "<group>";
-		};
-		788A568A240E886000E5484A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				788A568B240E886000E5484A /* Data.swift */,
-				788A568C240E886000E5484A /* Landmark.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		788A568F240E888000E5484A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,14 +243,27 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		788A56AA240E888F00E5484A /* Supporting Views */ = {
+		A5A7B0A3C6FD9CF4471879BC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				788A56AB240E888F00E5484A /* MapView.swift */,
-				788A56AC240E888F00E5484A /* CircleImage.swift */,
-				788A56AD240E888F00E5484A /* LandmarkRow.swift */,
+				7DCAB49E907130598B13D814 /* Pods-Notepad.debug.xcconfig */,
+				3DF7372181A6696886803E36 /* Pods-Notepad.release.xcconfig */,
+				7AC09183A06CE98647D4FA8A /* Pods-Notepad-NotepadUITests.debug.xcconfig */,
+				5E19D69E11C51DF7635E65AF /* Pods-Notepad-NotepadUITests.release.xcconfig */,
+				201702BB34EC942B4A859DFA /* Pods-NotepadTests.debug.xcconfig */,
+				8C29E13F668E9D3850E65478 /* Pods-NotepadTests.release.xcconfig */,
 			);
-			path = "Supporting Views";
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CEB81D171A7A5B3E64CE562A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				873DDD2DD8BCDC91B25B2689 /* Pods_Notepad.framework */,
+				FD140393147B75F710D19631 /* Pods_Notepad_NotepadUITests.framework */,
+				116F7D49B7BF8F5C2E12EF0A /* Pods_NotepadTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,9 +273,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 788A5473240D130A00E5484A /* Build configuration list for PBXNativeTarget "Notepad" */;
 			buildPhases = (
+				ECBE379E09EC11A39F508723 /* [CP] Check Pods Manifest.lock */,
 				788A5445240D130800E5484A /* Sources */,
 				788A5446240D130800E5484A /* Frameworks */,
 				788A5447240D130800E5484A /* Resources */,
+				ECD0DC8C67187007BBA94C4A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,6 +292,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 788A5476240D130A00E5484A /* Build configuration list for PBXNativeTarget "NotepadTests" */;
 			buildPhases = (
+				BEE6F8439453693306C79FAF /* [CP] Check Pods Manifest.lock */,
 				788A545B240D130A00E5484A /* Sources */,
 				788A545C240D130A00E5484A /* Frameworks */,
 				788A545D240D130A00E5484A /* Resources */,
@@ -314,9 +311,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 788A5479240D130A00E5484A /* Build configuration list for PBXNativeTarget "NotepadUITests" */;
 			buildPhases = (
+				555BC7E805D7A0E2FC12D136 /* [CP] Check Pods Manifest.lock */,
 				788A5466240D130A00E5484A /* Sources */,
 				788A5467240D130A00E5484A /* Frameworks */,
 				788A5468240D130A00E5484A /* Resources */,
+				9C187EAE20C58E9CE207B67E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -413,34 +412,127 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		555BC7E805D7A0E2FC12D136 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Notepad-NotepadUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C187EAE20C58E9CE207B67E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Notepad-NotepadUITests/Pods-Notepad-NotepadUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Notepad-NotepadUITests/Pods-Notepad-NotepadUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Notepad-NotepadUITests/Pods-Notepad-NotepadUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEE6F8439453693306C79FAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NotepadTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECBE379E09EC11A39F508723 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Notepad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECD0DC8C67187007BBA94C4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Notepad/Pods-Notepad-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Notepad/Pods-Notepad-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Notepad/Pods-Notepad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		788A5445240D130800E5484A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				788A56B9240FD16C00E5484A /* Note.swift in Sources */,
-				7854D66124177FF9007A5BB8 /* EditStateScrollView.swift in Sources */,
 				788A544D240D130800E5484A /* AppDelegate.swift in Sources */,
-				788A56AE240E888F00E5484A /* MapView.swift in Sources */,
-				788A568E240E886000E5484A /* Landmark.swift in Sources */,
+				7846899B242A2854007FD3D5 /* NoteEditPageViewController.swift in Sources */,
+				7846899D242A2869007FD3D5 /* NoteListTableCell.swift in Sources */,
 				788A56CA24112A3300E5484A /* NoteEntity+CoreDataProperties.swift in Sources */,
 				7854D6E7241B807B007A5BB8 /* Tools.swift in Sources */,
-				788A56AF240E888F00E5484A /* CircleImage.swift in Sources */,
-				788A568D240E886000E5484A /* Data.swift in Sources */,
+				78468999242A2820007FD3D5 /* NoteListViewController.swift in Sources */,
 				788A56BF2410AAE100E5484A /* DataBaseManager.swift in Sources */,
-				788A56BD240FDC0600E5484A /* NoteEditPage.swift in Sources */,
-				788A5687240E884B00E5484A /* LandmarkList.swift in Sources */,
 				788A56C22411253000E5484A /* Note.xcdatamodeld in Sources */,
-				788A56B2240E88AC00E5484A /* UserData.swift in Sources */,
-				788A56B4240E896C00E5484A /* NoteListCell.swift in Sources */,
 				788A56C924112A3300E5484A /* NoteEntity+CoreDataClass.swift in Sources */,
+				7846899F242A2EEA007FD3D5 /* MainNavigationViewController.swift in Sources */,
 				788A56BB240FD2E700E5484A /* FakeData.swift in Sources */,
-				788A5689240E885600E5484A /* LandmarkDetail.swift in Sources */,
-				788A544F240D130800E5484A /* SceneDelegate.swift in Sources */,
 				788A56B7240FD02200E5484A /* UserDataManager.swift in Sources */,
-				788A5684240E880D00E5484A /* NoteList.swift in Sources */,
-				7854D65F24177C95007A5BB8 /* KeyboardListener.swift in Sources */,
-				788A56B0240E888F00E5484A /* LandmarkRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +707,7 @@
 		};
 		788A5474240D130A00E5484A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DCAB49E907130598B13D814 /* Pods-Notepad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -622,6 +715,7 @@
 				DEVELOPMENT_TEAM = 6KG7UG74Q2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Notepad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,6 +730,7 @@
 		};
 		788A5475240D130A00E5484A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DF7372181A6696886803E36 /* Pods-Notepad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -643,6 +738,7 @@
 				DEVELOPMENT_TEAM = 6KG7UG74Q2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Notepad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -657,6 +753,7 @@
 		};
 		788A5477240D130A00E5484A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 201702BB34EC942B4A859DFA /* Pods-NotepadTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -678,6 +775,7 @@
 		};
 		788A5478240D130A00E5484A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C29E13F668E9D3850E65478 /* Pods-NotepadTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -699,6 +797,7 @@
 		};
 		788A547A240D130A00E5484A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AC09183A06CE98647D4FA8A /* Pods-Notepad-NotepadUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -718,6 +817,7 @@
 		};
 		788A547B240D130A00E5484A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E19D69E11C51DF7635E65AF /* Pods-Notepad-NotepadUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -6,12 +6,13 @@
 //  Copyright © 2020 王嘉宁. All rights reserved.
 //
 
-import SwiftUI
-import Combine
+import Foundation
+//import SwiftUI
+//import Combine
 
-final class UserDataManager: ObservableObject {
+final class UserDataManager {
 //    @Published var showFavoritesOnly = false
-    @Published var userNoteData = fakeUserData
+    var userNoteData = fakeUserData
     
     func retriveAllUserNoteData() {
         DataBaseManager.sharedManager.searchNote(by: nil) { [weak self] (NoteEntity) -> (Void) in
