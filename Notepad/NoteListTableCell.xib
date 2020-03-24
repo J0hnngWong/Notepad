@@ -4,12 +4,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="122" id="C2e-y6-yyq" customClass="NoteListTableCell" customModule="Notepad" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="122" id="C2e-y6-yyq" customClass="NoteListTableCell" customModule="Notepad" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C2e-y6-yyq" id="osc-LK-L4Z">
@@ -42,6 +43,7 @@
                     <constraint firstItem="PoY-v1-mEr" firstAttribute="top" secondItem="osc-LK-L4Z" secondAttribute="top" constant="20" id="wrr-6F-UGr"/>
                 </constraints>
             </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="Nje-mp-27G"/>
             <connections>
                 <outlet property="detailLabel" destination="XTh-2V-CXe" id="uKM-f6-SLI"/>
                 <outlet property="titleLabel" destination="UBb-99-1Lx" id="HJC-7C-Qa4"/>

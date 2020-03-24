@@ -14,6 +14,7 @@
 		7846899F242A2EEA007FD3D5 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846899E242A2EEA007FD3D5 /* MainNavigationViewController.swift */; };
 		784689A1242A3723007FD3D5 /* NoteListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784689A0242A3723007FD3D5 /* NoteListTableCell.xib */; };
 		784689A3242A38C7007FD3D5 /* UITableViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784689A2242A38C7007FD3D5 /* UITableViewSupport.swift */; };
+		784689A5242A46E0007FD3D5 /* NoteEditPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784689A4242A46E0007FD3D5 /* NoteEditPageViewController.xib */; };
 		7854D6E7241B807B007A5BB8 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854D6E6241B807B007A5BB8 /* Tools.swift */; };
 		788A544D240D130800E5484A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A544C240D130800E5484A /* AppDelegate.swift */; };
 		788A5453240D130A00E5484A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 788A5452240D130A00E5484A /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		7846899E242A2EEA007FD3D5 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		784689A0242A3723007FD3D5 /* NoteListTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteListTableCell.xib; sourceTree = "<group>"; };
 		784689A2242A38C7007FD3D5 /* UITableViewSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewSupport.swift; sourceTree = "<group>"; };
+		784689A4242A46E0007FD3D5 /* NoteEditPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteEditPageViewController.xib; sourceTree = "<group>"; };
 		7854D6E6241B807B007A5BB8 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		788A5449240D130800E5484A /* Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		788A544C240D130800E5484A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				78468997242A2763007FD3D5 /* DataModel */,
 				7846899A242A2854007FD3D5 /* NoteEditPageViewController.swift */,
+				784689A4242A46E0007FD3D5 /* NoteEditPageViewController.xib */,
 				7846899C242A2869007FD3D5 /* NoteListTableCell.swift */,
 				784689A0242A3723007FD3D5 /* NoteListTableCell.xib */,
 				78468998242A2820007FD3D5 /* NoteListViewController.swift */,
@@ -386,6 +389,7 @@
 				783F259424220A4100CB117D /* Localizable.strings in Resources */,
 				788A5456240D130A00E5484A /* Preview Assets.xcassets in Resources */,
 				788A5453240D130A00E5484A /* Assets.xcassets in Resources */,
+				784689A5242A46E0007FD3D5 /* NoteEditPageViewController.xib in Resources */,
 				784689A1242A3723007FD3D5 /* NoteListTableCell.xib in Resources */,
 				788A569F240E888000E5484A /* silversalmoncreek.jpg in Resources */,
 				788A569D240E888000E5484A /* charleyrivers.jpg in Resources */,

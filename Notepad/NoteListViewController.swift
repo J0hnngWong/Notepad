@@ -13,11 +13,14 @@ import SnapKit
 // property
 class NoteListViewController: UIViewController {
     
+    let addButtonWidth: CGFloat = 60
     let tableView = UITableView()
+    let addButton = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         renderSubviews()
+        bindingData()
     }
 }
 
@@ -29,7 +32,8 @@ extension NoteListViewController {
         navigationController?.navigationItem.largeTitleDisplayMode = .automatic
         navigationController?.navigationBar.prefersLargeTitles = true
         renderTableView()
-        bindingData()
+        renderAddButton()
+        assignEvents()
     }
     
     func renderTableView() {
@@ -42,6 +46,21 @@ extension NoteListViewController {
         tableView.estimatedRowHeight = 120
         tableView.register(UINib(nibName: "NoteListTableCell", bundle: Bundle.main), forCellReuseIdentifier: NoteListTableCell.NoteListTableCellReusableIdentifier)
         tableView.tableFooterView = UIView()
+    }
+    
+    func renderAddButton() {
+//        addButton.setImage(UIImage(systemName: "plus"), for: .normal)
+        addButton.backgroundColor = .systemBlue
+        addButton.layer.cornerRadius = addButtonWidth / 2
+        addButton.setTitle("+", for: .normal)
+        addButton.titleLabel?.font = UIFont(name: "Avenir-Book", size: 32)
+        addButton.titleLabel?.textColor = .white
+        view.addSubview(addButton)
+        addButton.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview().offset(-8)
+            make.centerX.equalToSuperview()
+            make.width.height.equalTo(addButtonWidth)
+        }
     }
 }
 
@@ -68,6 +87,21 @@ extension NoteListViewController {
     func bindingData() {
         NotificationCenter.default.addObserver(forName: .UserNoteDataUpdateNotification, object: nil, queue: OperationQueue.main) { (notification) in
             self.tableView.reloadData()
+        }
+    }
+}
+
+// event
+extension NoteListViewController {
+    func assignEvents() {
+        addButton.addTarget(self, action: #selector(addButtonClickAction), for: .touchUpInside)
+    }
+    
+    @objc
+    func addButtonClickAction() {
+        let newEditPage = NoteEditPageViewController()
+        present(newEditPage, animated: true) {
+            
         }
     }
 }
