@@ -9,14 +9,44 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="C2e-y6-yyq" customClass="NoteListTableCell" customModule="Notepad" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="122" id="C2e-y6-yyq" customClass="NoteListTableCell" customModule="Notepad" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C2e-y6-yyq" id="osc-LK-L4Z">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PoY-v1-mEr">
+                        <rect key="frame" x="20" y="20" width="374" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-99-1Lx">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTh-2V-CXe">
+                                <rect key="frame" x="0.0" y="40.5" width="374" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PoY-v1-mEr" firstAttribute="leading" secondItem="osc-LK-L4Z" secondAttribute="leading" constant="20" id="7cc-xe-b3v"/>
+                    <constraint firstAttribute="bottom" secondItem="PoY-v1-mEr" secondAttribute="bottom" constant="20" id="Z9o-NV-Jjh"/>
+                    <constraint firstAttribute="trailing" secondItem="PoY-v1-mEr" secondAttribute="trailing" constant="20" id="d53-IG-cum"/>
+                    <constraint firstItem="PoY-v1-mEr" firstAttribute="centerY" secondItem="osc-LK-L4Z" secondAttribute="centerY" id="qcX-qD-zUk"/>
+                    <constraint firstItem="PoY-v1-mEr" firstAttribute="top" secondItem="osc-LK-L4Z" secondAttribute="top" constant="20" id="wrr-6F-UGr"/>
+                </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="137.68115942028987" y="106.47321428571428"/>
+            <connections>
+                <outlet property="detailLabel" destination="XTh-2V-CXe" id="uKM-f6-SLI"/>
+                <outlet property="titleLabel" destination="UBb-99-1Lx" id="HJC-7C-Qa4"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="107.14285714285714"/>
         </tableViewCell>
     </objects>
 </document>

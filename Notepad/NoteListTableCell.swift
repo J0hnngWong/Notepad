@@ -11,10 +11,19 @@ import UIKit
 
 class NoteListTableCell: UITableViewCell {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    
     static let NoteListTableCellReusableIdentifier = "NoteListTableCellReusableIdentifier"
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.contentView.backgroundColor = .red
+    }
+}
+
+extension NoteListTableCell {
+    public func updateCellWithNoteInfo(_ note: Note) {
+        titleLabel.text = note.title
+        detailLabel.text = note.detail
     }
 }

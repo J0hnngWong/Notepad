@@ -13,7 +13,18 @@ class MainNavigationViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        renderController()
+        renderSubviews()
+    }
+}
+
+extension MainNavigationViewController {
+    func renderController() {
         let mainListVC = NoteListViewController()
         viewControllers = [mainListVC]
+    }
+    
+    func renderSubviews() {
+        
     }
 }

@@ -24,7 +24,10 @@ class NoteListViewController: UIViewController {
 // render
 extension NoteListViewController {
     func renderSubviews() {
-        view.backgroundColor = .red
+        view.backgroundColor = .white
+        title =  NSLocalizedString("Notes", comment: "")
+        navigationController?.navigationItem.largeTitleDisplayMode = .automatic
+        navigationController?.navigationBar.prefersLargeTitles = true
         renderTableView()
         bindingData()
     }
@@ -49,8 +52,13 @@ extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: NoteListTableCell.NoteListTableCellReusableIdentifier, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NoteListTableCell.NoteListTableCellReusableIdentifier, for: indexPath) as? NoteListTableCell else { return UITableViewCell() }
+        cell.updateCellWithNoteInfo(UserDataManager.default.userNoteData[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
