@@ -67,10 +67,12 @@ extension NoteEditPageViewController {
             pageTitleLabel.isHidden = false
             commitButton.isHidden = false
             lastEditDateLabel.isHidden = true
+            topTapDismissView.isHidden = false
         case .edit:
             pageTitleLabel.isHidden = true
             commitButton.isHidden = true
             lastEditDateLabel.isHidden = false
+            topTapDismissView.isHidden = true
         }
         
         noteTitleTextField.text = note.title
