@@ -51,6 +51,11 @@ class NoteEditPageViewController: UIViewController {
         renderSubviews()
         assignEvents()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        noteTitleTextField.becomeFirstResponder()
+    }
 }
 
 extension NoteEditPageViewController {

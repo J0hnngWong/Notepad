@@ -28,6 +28,12 @@ class NoteListViewController: UIViewController {
         renderSubviews()
         bindingData()
         UserDataManager.default.retriveAllUserNoteData()
+        UIApplication.shared.applicationSupportsShakeToEdit = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        resignFirstResponder()
     }
     
     deinit {
@@ -142,6 +148,25 @@ extension NoteListViewController {
         notesData = UserDataManager.default.userNoteData
         DispatchQueue.main.async {
             self.tableView.reloadData()
+        }
+    }
+}
+
+// shake
+extension NoteListViewController {
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            addButtonClickAction()
+        }
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        
+    }
+    
+    override func motionCancelled(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            
         }
     }
 }
