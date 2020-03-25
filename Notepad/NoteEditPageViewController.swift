@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+enum NoteEditPageType {
+    case new
+    case edit
+}
+
 class NoteEditPageViewController: UIViewController {
     
     // UI element
@@ -23,9 +28,11 @@ class NoteEditPageViewController: UIViewController {
     
     // data
     var note: Note
+    var pageType: NoteEditPageType
     
-    init(_ note: Note) {
+    init(_ pageType: NoteEditPageType, _ note: Note) {
         self.note = note
+        self.pageType = pageType
         super.init(nibName: "NoteEditPageViewController", bundle: Bundle.main)
     }
     
@@ -59,9 +66,16 @@ extension NoteEditPageViewController {
     
     @objc
     func commitButtonClickAction() {
-        dismiss(animated: true) {
-            
+        if pageType == .new {
+            UserDataManager.default.insertNewNote(note: note) { (result) in
+            }
+        } else if pageType == .edit {
+            UserDataManager.default.updateNote(by: note.id, note: note) { (result) in
+            }
+        } else {
+            // notice user there is no page type like this
         }
+        autoDismiss(true, dismissComplete: nil)
     }
 }
 

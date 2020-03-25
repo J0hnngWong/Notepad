@@ -100,7 +100,7 @@ extension NoteListViewController {
     @objc
     func addButtonClickAction() {
         let newNote = Note(id: UUID(), title: "", detail: "", date: Date())
-        let newEditPage = NoteEditPageViewController(newNote)
+        let newEditPage = NoteEditPageViewController(.new, newNote)
         present(newEditPage, animated: true) {
             
         }

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 class Tools<T> {
     
@@ -95,5 +95,47 @@ class Tools<T> {
             resultArr.append(contentsOf: remainingElements)
         }
         return resultArr
+    }
+}
+
+extension Tools {
+    // UI related
+    public class func applicationWindow() -> UIWindow? {
+        let windows = UIApplication.shared.windows
+        for window in windows {
+            if window.windowLevel == .normal {
+                return window
+            }
+        }
+        return nil
+    }
+    
+    public class func currentViewController() -> UIViewController? {
+        guard let windowsRootViewController = Tools.applicationWindow()?.rootViewController else { return nil }
+        var rootViewController: UIViewController? = windowsRootViewController
+        if windowsRootViewController is UINavigationController {
+            let naviVC = windowsRootViewController as? UINavigationController
+            rootViewController = naviVC?.topViewController
+        }
+        // loop to trace the most top vc kind like recursion
+        while rootViewController?.presentedViewController != nil {
+            rootViewController = rootViewController?.presentedViewController
+            if rootViewController is UINavigationController {
+                let naviVC = rootViewController as? UINavigationController
+                rootViewController = naviVC?.topViewController
+            }
+        }
+        // if vc is preseting or dismissing
+        while rootViewController?.isBeingDismissed ?? false || rootViewController?.navigationController?.isBeingDismissed ?? false {
+            rootViewController = rootViewController?.presentingViewController
+        }
+//        while rootViewController?.isBeingPresented ?? false || rootViewController?.navigationController?.isBeingPresented ?? false {
+//            rootViewController = rootViewController
+//        }
+        let naviVC = rootViewController as? UINavigationController
+        if naviVC != nil {
+            rootViewController = naviVC?.topViewController
+        }
+        return rootViewController
     }
 }
