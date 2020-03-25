@@ -8,6 +8,7 @@ target 'Notepad' do
 
   # Pods for Notepad
   pod 'SnapKit'
+  pod 'IQKeyboardManager'
 
   target 'NotepadTests' do
     inherit! :search_paths

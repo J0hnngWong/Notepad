@@ -73,6 +73,7 @@ extension NoteEditPageViewController {
             commitButton.isHidden = true
             lastEditDateLabel.isHidden = false
             topTapDismissView.isHidden = true
+            renderNaviBarRightCommitButton()
         }
         
         noteTitleTextField.text = note.title
@@ -82,6 +83,11 @@ extension NoteEditPageViewController {
         commitButton.layer.cornerRadius = commitButton.bounds.height / 2
         commitButton.isEnabled = !(noteTitleTextField.text?.isEmpty ?? true)
         commitButton.setTitle(NSLocalizedString("Commit", comment: ""), for: .normal)
+    }
+    
+    func renderNaviBarRightCommitButton() {
+        let naviBarRightCommitButton = UIBarButtonItem(title: NSLocalizedString("Commit", comment: ""), style: .plain, target: self, action: #selector(commitButtonClickAction))
+        navigationItem.rightBarButtonItem = naviBarRightCommitButton
     }
 }
 
