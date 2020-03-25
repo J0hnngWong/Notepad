@@ -17,7 +17,7 @@ enum NoteEditPageType {
 class NoteEditPageViewController: UIViewController {
     
     // UI element
-    @IBOutlet weak var topTapDismissView: UIView!
+    @IBOutlet weak var topTapDismissButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
@@ -61,18 +61,19 @@ extension NoteEditPageViewController {
         pageTitleLabel.text = NSLocalizedString("NewNote", comment: "")
         noteTitleLabel.text = NSLocalizedString("Title", comment: "")
         noteDetailLabel.text = NSLocalizedString("Detail", comment: "")
+        topTapDismissButton.setTitle(NSLocalizedString("Cancel", comment: ""), for: .normal)
         
         switch pageType {
         case .new:
             pageTitleLabel.isHidden = false
             commitButton.isHidden = false
             lastEditDateLabel.isHidden = true
-            topTapDismissView.isHidden = false
+            topTapDismissButton.isHidden = false
         case .edit:
             pageTitleLabel.isHidden = true
             commitButton.isHidden = true
             lastEditDateLabel.isHidden = false
-            topTapDismissView.isHidden = true
+            topTapDismissButton.isHidden = true
             renderNaviBarRightCommitButton()
         }
         
@@ -96,8 +97,7 @@ extension NoteEditPageViewController {
         commitButton.addTarget(self, action: #selector(commitButtonClickAction), for: .touchUpInside)
         noteTitleTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
         noteDetailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
-        let tapDismissGesture = UITapGestureRecognizer(target: self, action: #selector(dismissViewClickAction))
-        topTapDismissView.addGestureRecognizer(tapDismissGesture)
+        topTapDismissButton.addTarget(self, action: #selector(dismissButtonClickAction), for: .touchUpInside)
     }
     
     @objc
@@ -115,7 +115,7 @@ extension NoteEditPageViewController {
     }
     
     @objc
-    func dismissViewClickAction() {
+    func dismissButtonClickAction() {
         autoDismiss(true, dismissComplete: nil)
     }
 }

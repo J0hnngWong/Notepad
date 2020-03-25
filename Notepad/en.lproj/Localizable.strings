@@ -12,6 +12,7 @@ Detail = "Detail";
 NewNote = "New Note";
 Edit = "Edit";
 Commit = "Commit";
+Cancel = "Cancel";
 LastEditDate = "Last Edit Date";
 
 

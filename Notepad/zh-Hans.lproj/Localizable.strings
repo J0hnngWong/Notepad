@@ -12,6 +12,7 @@ Detail = "详细";
 NewNote = "新笔记";
 Edit = "编辑";
 Commit = "提交";
+Cancel = "取消";
 LastEditDate = "上次编辑时间";
 
 
