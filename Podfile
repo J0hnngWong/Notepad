@@ -4,7 +4,7 @@ source 'https://github.com/cocoapods/specs.git'  # 官方库
 
 target 'Notepad' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+#  use_frameworks!
 
   # Pods for Notepad
   pod 'SnapKit'
