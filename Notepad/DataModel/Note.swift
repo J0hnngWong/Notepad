@@ -20,4 +20,8 @@ struct Note: Hashable, Codable, Identifiable {
         self.detail = detail
         self.date = date
     }
+    
+    func isEmptyNote() -> Bool {
+        return title.isEmpty
+    }
 }

@@ -77,6 +77,9 @@ extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let note = UserDataManager.default.userNoteData[indexPath.row]
+        let vc = NoteEditPageViewController(.edit, note)
+        navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

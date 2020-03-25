@@ -23,6 +23,7 @@ class NoteEditPageViewController: UIViewController {
     @IBOutlet weak var noteTitleTextField: UITextField!
     @IBOutlet weak var noteDetailLabel: UILabel!
     @IBOutlet weak var noteDetailTextField: UITextField!
+    @IBOutlet weak var lastEditDateLabel: UILabel!
     
     @IBOutlet weak var commitButton: UIButton!
     
@@ -43,6 +44,7 @@ class NoteEditPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        renderSubviews()
         assignEvents()
     }
 }
@@ -53,7 +55,24 @@ extension NoteEditPageViewController {
         noteTitleLabel.text = NSLocalizedString("Title", comment: "")
         noteDetailLabel.text = NSLocalizedString("Detail", comment: "")
         
-        commitButton.layer.cornerRadius = commitButton.bounds.width / 2
+        switch pageType {
+        case .new:
+            pageTitleLabel.isHidden = false
+            commitButton.isHidden = false
+            lastEditDateLabel.isHidden = true
+        case .edit:
+            pageTitleLabel.isHidden = true
+            commitButton.isHidden = true
+            lastEditDateLabel.isHidden = false
+        }
+        
+        noteTitleTextField.text = note.title
+        noteDetailTextField.text = note.detail
+        lastEditDateLabel.text = "\(NSLocalizedString("LastEditDate", comment: "")): \n \(note.date)"
+        
+        commitButton.layer.cornerRadius = commitButton.bounds.height / 2
+        commitButton.isEnabled = !(noteTitleTextField.text?.isEmpty ?? true)
+        commitButton.setTitle(NSLocalizedString("Commit", comment: ""), for: .normal)
     }
 }
 
@@ -87,6 +106,8 @@ extension NoteEditPageViewController: UITextFieldDelegate {
         } else if textField == noteDetailTextField {
             note.detail = textField.text ?? ""
         }
+        
+        commitButton.isEnabled = !(noteTitleTextField.text?.isEmpty ?? true)
     }
     
 }

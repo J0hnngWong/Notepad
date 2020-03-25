@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoteEditPageViewController" customModule="Notepad" customModuleProvider="target">
             <connections>
                 <outlet property="commitButton" destination="iFt-Ke-Ea5" id="ftc-LP-ALg"/>
+                <outlet property="lastEditDateLabel" destination="F4q-7m-oog" id="QBb-gg-neq"/>
                 <outlet property="noteDetailLabel" destination="0HA-cU-znH" id="N8c-aG-iHa"/>
                 <outlet property="noteDetailTextField" destination="ih9-Ra-Wn5" id="ZFA-75-bt8"/>
                 <outlet property="noteTitleLabel" destination="7Vt-Bu-ego" id="TT7-Ws-hMQ"/>
@@ -25,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="H2L-SM-LdJ">
-                    <rect key="frame" x="16" y="74" width="382" height="238"/>
+                    <rect key="frame" x="16" y="74" width="382" height="290"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4Q-Pw-NGr">
                             <rect key="frame" x="0.0" y="0.0" width="382" height="42"/>
@@ -79,17 +80,23 @@
                                 </view>
                             </subviews>
                         </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Edit Date:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4q-7m-oog">
+                            <rect key="frame" x="0.0" y="268" width="382" height="22"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFt-Ke-Ea5">
-                    <rect key="frame" x="147" y="342" width="120" height="44"/>
+                    <rect key="frame" x="147" y="394" width="120" height="44"/>
                     <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="Qj3-4N-2qC"/>
                         <constraint firstAttribute="width" constant="120" id="cKg-bx-hGk"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                    <state key="normal" title="Button">
+                    <state key="normal" title="Commit">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
