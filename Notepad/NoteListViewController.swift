@@ -17,10 +17,22 @@ class NoteListViewController: UIViewController {
     let tableView = UITableView()
     let addButton = UIButton(type: .custom)
     
+    var notesData: [Note] = [] {
+        didSet {
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         renderSubviews()
         bindingData()
+        UserDataManager.default.retriveAllUserNoteData()
+    }
+    
+    deinit {
+        /// 移除通知
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -67,20 +79,38 @@ extension NoteListViewController {
 // table view delegate
 extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return UserDataManager.default.userNoteData.count
+        return notesData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NoteListTableCell.NoteListTableCellReusableIdentifier, for: indexPath) as? NoteListTableCell else { return UITableViewCell() }
-        cell.updateCellWithNoteInfo(UserDataManager.default.userNoteData[indexPath.row])
+        cell.updateCellWithNoteInfo(notesData[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let note = UserDataManager.default.userNoteData[indexPath.row]
+        let note = notesData[indexPath.row]
         let vc = NoteEditPageViewController(.edit, note)
         navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // batch update is perform a real action after the animation complete
+            let deleteNote = notesData[indexPath.row]
+            tableView.performBatchUpdates({
+                notesData.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .left)
+            }) { (result) in
+                UserDataManager.default.deleteNote(by: deleteNote.id) { (result) in
+                }
+            }
+        }
     }
 }
 
@@ -88,9 +118,7 @@ extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension NoteListViewController {
     func bindingData() {
-        NotificationCenter.default.addObserver(forName: .UserNoteDataUpdateNotification, object: nil, queue: OperationQueue.main) { (notification) in
-            self.tableView.reloadData()
-        }
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadDataForTableView), name: .UserNoteDataUpdateNotification, object: nil)
     }
 }
 
@@ -106,6 +134,14 @@ extension NoteListViewController {
         let newEditPage = NoteEditPageViewController(.new, newNote)
         present(newEditPage, animated: true) {
             
+        }
+    }
+    
+    @objc
+    func reloadDataForTableView() {
+        notesData = UserDataManager.default.userNoteData
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
 }

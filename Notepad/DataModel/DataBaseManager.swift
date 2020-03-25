@@ -70,8 +70,9 @@ class DataBaseManager {
         noteEntity.id = note.id
         
         // 查询所有数据请求
-//        let request: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
-//        let resultArray = try? context.fetch(request) as? Array<NoteEntity>
+        let request: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
+        let resultArray = try? context.fetch(request) as? Array<NoteEntity>
+        complete?(resultArray ?? [])
         
         // 保存插入的数据
         do {
