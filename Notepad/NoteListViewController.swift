@@ -29,7 +29,7 @@ extension NoteListViewController {
     func renderSubviews() {
         view.backgroundColor = .white
         title =  NSLocalizedString("Notes", comment: "")
-        navigationController?.navigationItem.largeTitleDisplayMode = .automatic
+        navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
         renderTableView()
         renderAddButton()

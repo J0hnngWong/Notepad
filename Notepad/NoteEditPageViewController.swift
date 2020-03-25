@@ -17,6 +17,10 @@ enum NoteEditPageType {
 class NoteEditPageViewController: UIViewController {
     
     // UI element
+    @IBOutlet weak var topTapDismissView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
+    
     @IBOutlet weak var pageTitleLabel: UILabel!
     
     @IBOutlet weak var noteTitleLabel: UILabel!
@@ -51,6 +55,9 @@ class NoteEditPageViewController: UIViewController {
 
 extension NoteEditPageViewController {
     func renderSubviews() {
+        navigationItem.largeTitleDisplayMode = .never
+        scrollView.alwaysBounceVertical = true
+        
         pageTitleLabel.text = NSLocalizedString("NewNote", comment: "")
         noteTitleLabel.text = NSLocalizedString("Title", comment: "")
         noteDetailLabel.text = NSLocalizedString("Detail", comment: "")
@@ -81,6 +88,8 @@ extension NoteEditPageViewController {
         commitButton.addTarget(self, action: #selector(commitButtonClickAction), for: .touchUpInside)
         noteTitleTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
         noteDetailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .allEditingEvents)
+        let tapDismissGesture = UITapGestureRecognizer(target: self, action: #selector(dismissViewClickAction))
+        topTapDismissView.addGestureRecognizer(tapDismissGesture)
     }
     
     @objc
@@ -94,6 +103,11 @@ extension NoteEditPageViewController {
         } else {
             // notice user there is no page type like this
         }
+        autoDismiss(true, dismissComplete: nil)
+    }
+    
+    @objc
+    func dismissViewClickAction() {
         autoDismiss(true, dismissComplete: nil)
     }
 }
