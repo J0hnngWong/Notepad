@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,6 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoteEditPageViewController" customModule="Notepad" customModuleProvider="target">
             <connections>
                 <outlet property="commitButton" destination="iFt-Ke-Ea5" id="ftc-LP-ALg"/>
+                <outlet property="noteDetailLabel" destination="0HA-cU-znH" id="N8c-aG-iHa"/>
+                <outlet property="noteDetailTextField" destination="ih9-Ra-Wn5" id="ZFA-75-bt8"/>
+                <outlet property="noteTitleLabel" destination="7Vt-Bu-ego" id="TT7-Ws-hMQ"/>
+                <outlet property="noteTitleTextField" destination="dme-ZY-0gY" id="XxZ-Dl-38l"/>
+                <outlet property="pageTitleLabel" destination="t4Q-Pw-NGr" id="Y1V-Gj-vcl"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gTD-Db-1Ou"/>
             </connections>
         </placeholder>
