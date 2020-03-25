@@ -65,7 +65,9 @@ extension NoteEditPageViewController {
         
         pageTitleLabel.text = NSLocalizedString("NewNote", comment: "")
         noteTitleLabel.text = NSLocalizedString("Title", comment: "")
+        noteTitleTextField.placeholder = NSLocalizedString("Title", comment: "")
         noteDetailLabel.text = NSLocalizedString("Detail", comment: "")
+        noteDetailTextField.placeholder = NSLocalizedString("Detail", comment: "")
         topTapDismissButton.setTitle(NSLocalizedString("Cancel", comment: ""), for: .normal)
         
         switch pageType {
