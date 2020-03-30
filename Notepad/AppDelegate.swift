@@ -33,15 +33,15 @@ extension AppDelegate {
         var resultShortCutArray: Array<UIApplicationShortcutItem> = []
         
         if UserDataManager.default.userNoteData.count >= 1 {
-            let firstNote = UIApplicationShortcutItem(type: "com.Johnny.first.note", localizedTitle: UserDataManager.default.userNoteData[0].title, localizedSubtitle: UserDataManager.default.userNoteData[0].detail, icon: UIApplicationShortcutIcon(type: .compose), userInfo: nil)
+            let firstNote = UIApplicationShortcutItem(type: "com.Johnny.first.note", localizedTitle: UserDataManager.default.userNoteData[0].title, localizedSubtitle: UserDataManager.default.userNoteData[0].detail, icon: nil/*UIApplicationShortcutIcon(type: .compose)*/, userInfo: nil)
             resultShortCutArray.append(firstNote)
         }
         if UserDataManager.default.userNoteData.count >= 2 {
-            let secondNote = UIApplicationShortcutItem(type: "com.Johnny.second.note", localizedTitle: UserDataManager.default.userNoteData[1].title, localizedSubtitle: UserDataManager.default.userNoteData[1].detail, icon: UIApplicationShortcutIcon(type: .compose), userInfo: nil)
+            let secondNote = UIApplicationShortcutItem(type: "com.Johnny.second.note", localizedTitle: UserDataManager.default.userNoteData[1].title, localizedSubtitle: UserDataManager.default.userNoteData[1].detail, icon: nil/*UIApplicationShortcutIcon(type: .compose)*/, userInfo: nil)
             resultShortCutArray.append(secondNote)
         }
         if UserDataManager.default.userNoteData.count >= 3 {
-            let secondNote = UIApplicationShortcutItem(type: "com.Johnny.second.note", localizedTitle: UserDataManager.default.userNoteData[2].title, localizedSubtitle: UserDataManager.default.userNoteData[2].detail, icon: UIApplicationShortcutIcon(type: .compose), userInfo: nil)
+            let secondNote = UIApplicationShortcutItem(type: "com.Johnny.second.note", localizedTitle: UserDataManager.default.userNoteData[2].title, localizedSubtitle: UserDataManager.default.userNoteData[2].detail, icon: nil/*UIApplicationShortcutIcon(type: .compose)*/, userInfo: nil)
             resultShortCutArray.append(secondNote)
         }
         

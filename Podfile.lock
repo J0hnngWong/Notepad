@@ -7,7 +7,7 @@ DEPENDENCIES:
   - SnapKit
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - IQKeyboardManager
     - SnapKit
 
@@ -17,4 +17,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: dc80f4eee16110f2f642daf5f5394dc938b92a22
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.0

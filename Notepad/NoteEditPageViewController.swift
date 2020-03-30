@@ -54,7 +54,9 @@ class NoteEditPageViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        noteTitleTextField.becomeFirstResponder()
+        if pageType == .new {
+            noteTitleTextField.becomeFirstResponder()
+        }
     }
 }
 

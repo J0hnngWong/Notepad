@@ -91,6 +91,9 @@ extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NoteListTableCell.NoteListTableCellReusableIdentifier, for: indexPath) as? NoteListTableCell else { return UITableViewCell() }
         cell.updateCellWithNoteInfo(notesData[indexPath.row])
+        if traitCollection.forceTouchCapability == .available {
+            registerForPreviewing(with: self, sourceView: cell)
+        }
         return cell
     }
     
@@ -118,6 +121,23 @@ extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+}
+
+extension NoteListViewController: UIViewControllerPreviewingDelegate {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let previewingCellContext = previewingContext.sourceView as? UITableViewCell else {
+            return nil
+        }
+        guard let index = tableView.indexPath(for: previewingCellContext) else { return nil }
+        let noteDetailPreviewVC = NoteEditPageViewController(.edit, notesData[index.row])
+        return noteDetailPreviewVC
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        navigationController?.pushViewController(viewControllerToCommit, animated: true)
+    }
+    
+    
 }
 
 // data binding
