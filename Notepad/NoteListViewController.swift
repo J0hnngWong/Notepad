@@ -16,6 +16,7 @@ class NoteListViewController: UIViewController {
     let addButtonWidth: CGFloat = 60
     let tableView = UITableView()
     let addButton = UIButton(type: .custom)
+    var safeAreaInsets: UIEdgeInsets?
     
     var notesData: [Note] = [] {
         didSet {
@@ -25,6 +26,7 @@ class NoteListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        safeAreaInsets = UIApplication.shared.keyWindow?.safeAreaInsets
         renderSubviews()
         bindingData()
         UserDataManager.default.retriveAllUserNoteData()
@@ -34,6 +36,10 @@ class NoteListViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         resignFirstResponder()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     deinit {
@@ -49,6 +55,7 @@ extension NoteListViewController {
         title =  NSLocalizedString("Notes", comment: "")
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.searchController = NoteListSearchController()
         renderTableView()
         renderAddButton()
         assignEvents()
@@ -75,7 +82,8 @@ extension NoteListViewController {
         addButton.titleLabel?.textColor = .white
         view.addSubview(addButton)
         addButton.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-8)
+            let safeAreaBottonMargin = safeAreaInsets?.bottom ?? 0
+            make.bottom.equalToSuperview().offset(-(safeAreaBottonMargin == 0 ? 16 : safeAreaBottonMargin))
             make.centerX.equalToSuperview()
             make.width.height.equalTo(addButtonWidth)
         }
