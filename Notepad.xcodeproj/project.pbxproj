@@ -48,6 +48,7 @@
 		788A56C924112A3300E5484A /* NoteEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56C724112A3300E5484A /* NoteEntity+CoreDataClass.swift */; };
 		788A56CA24112A3300E5484A /* NoteEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A56C824112A3300E5484A /* NoteEntity+CoreDataProperties.swift */; };
 		78E8621B243205E6005AAD3C /* NoteListSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8621A243205E6005AAD3C /* NoteListSearchController.swift */; };
+		78E8625B2434425A005AAD3C /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8625A2434425A005AAD3C /* UITools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		788A56C724112A3300E5484A /* NoteEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		788A56C824112A3300E5484A /* NoteEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		78E8621A243205E6005AAD3C /* NoteListSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListSearchController.swift; sourceTree = "<group>"; };
+		78E8625A2434425A005AAD3C /* UITools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITools.swift; sourceTree = "<group>"; };
 		7AC09183A06CE98647D4FA8A /* Pods-Notepad-NotepadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notepad-NotepadUITests.debug.xcconfig"; path = "Target Support Files/Pods-Notepad-NotepadUITests/Pods-Notepad-NotepadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7DCAB49E907130598B13D814 /* Pods-Notepad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notepad.debug.xcconfig"; path = "Target Support Files/Pods-Notepad/Pods-Notepad.debug.xcconfig"; sourceTree = "<group>"; };
 		8C29E13F668E9D3850E65478 /* Pods-NotepadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotepadTests.release.xcconfig"; path = "Target Support Files/Pods-NotepadTests/Pods-NotepadTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		788A544B240D130800E5484A /* Notepad */ = {
 			isa = PBXGroup;
 			children = (
+				78E8625924344247005AAD3C /* UITools */,
 				78468997242A2763007FD3D5 /* DataModel */,
 				7846899A242A2854007FD3D5 /* NoteEditPageViewController.swift */,
 				784689A4242A46E0007FD3D5 /* NoteEditPageViewController.xib */,
@@ -259,6 +262,14 @@
 				788A569C240E888000E5484A /* rainbowlake.jpg */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		78E8625924344247005AAD3C /* UITools */ = {
+			isa = PBXGroup;
+			children = (
+				78E8625A2434425A005AAD3C /* UITools.swift */,
+			);
+			path = UITools;
 			sourceTree = "<group>";
 		};
 		A5A7B0A3C6FD9CF4471879BC /* Pods */ = {
@@ -517,6 +528,7 @@
 				788A56BF2410AAE100E5484A /* DataBaseManager.swift in Sources */,
 				788A56C22411253000E5484A /* Note.xcdatamodeld in Sources */,
 				784689A3242A38C7007FD3D5 /* UITableViewSupport.swift in Sources */,
+				78E8625B2434425A005AAD3C /* UITools.swift in Sources */,
 				788A56C924112A3300E5484A /* NoteEntity+CoreDataClass.swift in Sources */,
 				7846899F242A2EEA007FD3D5 /* MainNavigationViewController.swift in Sources */,
 				788A56BB240FD2E700E5484A /* FakeData.swift in Sources */,
