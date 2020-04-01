@@ -22,7 +22,7 @@ class NotepadTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let result = Tools.mergeSort(list: [3,9,2,1,4,6,7,8,5,1]) { (left, right) -> Bool in
+        let result = CommonTools.mergeSort(list: [3,9,2,1,4,6,7,8,5,1]) { (left, right) -> Bool in
             return left > right
         }
         print(result)

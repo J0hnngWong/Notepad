@@ -75,7 +75,7 @@ extension UserDataManager {
     }
     
     func sortNoteByDate(with notes: Array<Note>) -> Array<Note> {
-//        return Tools.mergeSort(list: notes) { return $0.date > $1.date }
+//        return CommonTools.mergeSort(list: notes) { return $0.date > $1.date }
         return notes.sorted { return $0.date > $1.date }
     }
 }

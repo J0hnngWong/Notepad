@@ -1,5 +1,5 @@
 //
-//  Tools.swift
+//  CommonTools.swift
 //  Notepad
 //
 //  Created by 王嘉宁 on 2020/3/13.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Tools<T> {
+class CommonTools<T> {
     
     
     // 因为slice下标的特殊性
@@ -98,7 +98,7 @@ class Tools<T> {
     }
 }
 
-extension Tools {
+extension CommonTools {
     // UI related
     public class func applicationWindow() -> UIWindow? {
         let windows = UIApplication.shared.windows
@@ -111,7 +111,7 @@ extension Tools {
     }
     
     public class func currentViewController() -> UIViewController? {
-        guard let windowsRootViewController = Tools.applicationWindow()?.rootViewController else { return nil }
+        guard let windowsRootViewController = CommonTools.applicationWindow()?.rootViewController else { return nil }
         var rootViewController: UIViewController? = windowsRootViewController
         if windowsRootViewController is UINavigationController {
             let naviVC = windowsRootViewController as? UINavigationController

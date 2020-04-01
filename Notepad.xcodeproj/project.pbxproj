@@ -20,7 +20,7 @@
 		784689A5242A46E0007FD3D5 /* NoteEditPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784689A4242A46E0007FD3D5 /* NoteEditPageViewController.xib */; };
 		784689A7242B43C6007FD3D5 /* UIViewControllerSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784689A6242B43C6007FD3D5 /* UIViewControllerSupport.swift */; };
 		784689E9242BA203007FD3D5 /* KeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784689E8242BA203007FD3D5 /* KeyboardListener.swift */; };
-		7854D6E7241B807B007A5BB8 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854D6E6241B807B007A5BB8 /* Tools.swift */; };
+		7854D6E7241B807B007A5BB8 /* CommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854D6E6241B807B007A5BB8 /* CommonTools.swift */; };
 		788A544D240D130800E5484A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A544C240D130800E5484A /* AppDelegate.swift */; };
 		788A5453240D130A00E5484A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 788A5452240D130A00E5484A /* Assets.xcassets */; };
 		788A5456240D130A00E5484A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 788A5455240D130A00E5484A /* Preview Assets.xcassets */; };
@@ -86,7 +86,7 @@
 		784689A4242A46E0007FD3D5 /* NoteEditPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteEditPageViewController.xib; sourceTree = "<group>"; };
 		784689A6242B43C6007FD3D5 /* UIViewControllerSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerSupport.swift; sourceTree = "<group>"; };
 		784689E8242BA203007FD3D5 /* KeyboardListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardListener.swift; sourceTree = "<group>"; };
-		7854D6E6241B807B007A5BB8 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		7854D6E6241B807B007A5BB8 /* CommonTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTools.swift; sourceTree = "<group>"; };
 		788A5449240D130800E5484A /* Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		788A544C240D130800E5484A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		788A5452240D130A00E5484A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -194,20 +194,13 @@
 		788A544B240D130800E5484A /* Notepad */ = {
 			isa = PBXGroup;
 			children = (
-				78E8625924344247005AAD3C /* UITools */,
 				78468997242A2763007FD3D5 /* DataModel */,
-				7846899A242A2854007FD3D5 /* NoteEditPageViewController.swift */,
-				784689A4242A46E0007FD3D5 /* NoteEditPageViewController.xib */,
-				7846899C242A2869007FD3D5 /* NoteListTableCell.swift */,
-				784689A0242A3723007FD3D5 /* NoteListTableCell.xib */,
-				78468998242A2820007FD3D5 /* NoteListViewController.swift */,
-				78E8621A243205E6005AAD3C /* NoteListSearchController.swift */,
-				784689A2242A38C7007FD3D5 /* UITableViewSupport.swift */,
-				784689A6242B43C6007FD3D5 /* UIViewControllerSupport.swift */,
-				7846899E242A2EEA007FD3D5 /* MainNavigationViewController.swift */,
+				78E862602434432C005AAD3C /* Support */,
+				78E8625F24344318005AAD3C /* NoteSearch */,
+				78E8625E24344308005AAD3C /* NoteEditPage */,
+				78E8625C243442DF005AAD3C /* NoteList */,
+				78E8625924344247005AAD3C /* Tools */,
 				788A544C240D130800E5484A /* AppDelegate.swift */,
-				7854D6E6241B807B007A5BB8 /* Tools.swift */,
-				784689E8242BA203007FD3D5 /* KeyboardListener.swift */,
 				783F259624220A4100CB117D /* Localizable.strings */,
 				788A568F240E888000E5484A /* Resources */,
 				788A5452240D130A00E5484A /* Assets.xcassets */,
@@ -264,12 +257,59 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		78E8625924344247005AAD3C /* UITools */ = {
+		78E8625924344247005AAD3C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				784689E8242BA203007FD3D5 /* KeyboardListener.swift */,
+				7854D6E6241B807B007A5BB8 /* CommonTools.swift */,
 				78E8625A2434425A005AAD3C /* UITools.swift */,
 			);
-			path = UITools;
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		78E8625C243442DF005AAD3C /* NoteList */ = {
+			isa = PBXGroup;
+			children = (
+				78E8625D243442EF005AAD3C /* Cell */,
+				78468998242A2820007FD3D5 /* NoteListViewController.swift */,
+			);
+			path = NoteList;
+			sourceTree = "<group>";
+		};
+		78E8625D243442EF005AAD3C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7846899C242A2869007FD3D5 /* NoteListTableCell.swift */,
+				784689A0242A3723007FD3D5 /* NoteListTableCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		78E8625E24344308005AAD3C /* NoteEditPage */ = {
+			isa = PBXGroup;
+			children = (
+				7846899A242A2854007FD3D5 /* NoteEditPageViewController.swift */,
+				784689A4242A46E0007FD3D5 /* NoteEditPageViewController.xib */,
+			);
+			path = NoteEditPage;
+			sourceTree = "<group>";
+		};
+		78E8625F24344318005AAD3C /* NoteSearch */ = {
+			isa = PBXGroup;
+			children = (
+				78E8621A243205E6005AAD3C /* NoteListSearchController.swift */,
+			);
+			path = NoteSearch;
+			sourceTree = "<group>";
+		};
+		78E862602434432C005AAD3C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				784689A6242B43C6007FD3D5 /* UIViewControllerSupport.swift */,
+				7846899E242A2EEA007FD3D5 /* MainNavigationViewController.swift */,
+				784689A2242A38C7007FD3D5 /* UITableViewSupport.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		A5A7B0A3C6FD9CF4471879BC /* Pods */ = {
@@ -522,7 +562,7 @@
 				784689A7242B43C6007FD3D5 /* UIViewControllerSupport.swift in Sources */,
 				7846899D242A2869007FD3D5 /* NoteListTableCell.swift in Sources */,
 				788A56CA24112A3300E5484A /* NoteEntity+CoreDataProperties.swift in Sources */,
-				7854D6E7241B807B007A5BB8 /* Tools.swift in Sources */,
+				7854D6E7241B807B007A5BB8 /* CommonTools.swift in Sources */,
 				78468999242A2820007FD3D5 /* NoteListViewController.swift in Sources */,
 				784689E9242BA203007FD3D5 /* KeyboardListener.swift in Sources */,
 				788A56BF2410AAE100E5484A /* DataBaseManager.swift in Sources */,
